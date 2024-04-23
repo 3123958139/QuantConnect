@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "QuantConnect.ToolBox": {
+      "commandName": "Project",
+      "commandLineArgs": "--app=rdg\r\n--start=19980101\r\n--end=20240319\r\n--symbol-count=1000\r\n--resolution=Daily\r\n--random-seed=123456\r\n--rename-percentage=0.0\r\n--ipo-percentage=0.0\r\n--splits-percentage=0.0\r\n--dividends-percentage=0.0\r\n--dividend-every-quarter-percentage=0.0\r\n"
+    }
+  }
+}
