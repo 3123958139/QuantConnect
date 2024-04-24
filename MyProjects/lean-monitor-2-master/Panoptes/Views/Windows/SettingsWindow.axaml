@@ -1,0 +1,54 @@
+<Window x:Class="Panoptes.Views.Windows.SettingsWindow"
+		xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		Icon="/Resources/icon/logo_plain.ico"
+		DataContext="{Binding Settings, Source={StaticResource Locator}}"
+		WindowStartupLocation="CenterOwner"
+		Topmost="True" ShowActivated="True" ShowInTaskbar="True"
+		CanResize="False"
+        Title="Settings"
+		MinWidth="400" Width="500"
+		MinHeight="100" Height="200"
+		mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="200">
+
+	<Grid Margin="2" RowDefinitions="*,Auto">
+		<TabControl Grid.Row="0" TabStripPlacement="Left">
+			<TabItem Header="General">
+				<Border BorderBrush="{StaticResource ThemeBorderLowBrush}" BorderThickness="1">
+					<Grid RowDefinitions="Auto,Auto,Auto,Auto">
+						<TextBlock Grid.Row="0" Text="{Binding SelectedTimeZone}"/>
+						<ComboBox Grid.Row="1" Items="{Binding TimeZones}" SelectedItem="{Binding SelectedTimeZone}"/>
+						<ComboBox Grid.Row="2" Items="{Binding Grids}" SelectedItem="{Binding SelectedGrid}" SelectedIndex="0"/>
+					</Grid>
+				</Border>
+			</TabItem>
+			<TabItem Header="Theme">
+				<Border BorderBrush="{StaticResource ThemeBorderLowBrush}" BorderThickness="1">
+					<Grid>
+						<Label Content="TODO: Dark / Light"/>
+					</Grid>
+				</Border>
+			</TabItem>
+			<TabItem Header="Charts">
+				<Border BorderBrush="{StaticResource ThemeBorderLowBrush}" BorderThickness="1">
+					<Grid>
+						<Label Content="TODO: refresh rate"/>
+					</Grid>
+				</Border>
+			</TabItem>
+			<TabItem Header="Sounds">
+				<Border BorderBrush="{StaticResource ThemeBorderLowBrush}" BorderThickness="1">
+					<Grid>
+						<CheckBox Content="Sound activated" IsThreeState="False" IsChecked="{Binding SoundsActivated}" VerticalAlignment="Top"/>
+					</Grid>
+				</Border>
+			</TabItem>
+		</TabControl>
+		
+		<Grid Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="2">
+			<Button Content="Save" IsDefault="True" Command="{Binding SaveCommandAsync}" HorizontalAlignment="Right"/>
+		</Grid>
+	</Grid>
+</Window>

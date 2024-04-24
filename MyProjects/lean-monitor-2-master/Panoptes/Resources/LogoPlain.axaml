@@ -1,0 +1,31 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Design.PreviewWith>
+		<Border Padding="5" Height="100" Width="100" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+			<!-- Add Controls for Previewer Here -->
+
+			<DrawingPresenter Margin="0" Width="100" Height="100" Drawing="{StaticResource Logo}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+		</Border>
+	</Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+	<Style>		
+		<Style.Resources>
+
+			<DrawingGroup x:Key="Logo" ClipGeometry="M0,0 V10 H10 V0 H0 Z">
+				<!-- 'F0 M10,10z M0,0z' removed from each element-->
+				<!--eye-->
+				<GeometryDrawing Brush="{StaticResource ThemePanoptesBrush2}" Geometry="M6.52709,5.85596L4.13392,6.51986 3.46716,4.12098 5.86033,3.45708z"/>
+				<!--left-->
+				<GeometryDrawing Brush="{StaticResource ThemePanoptesBrush}" Geometry="M2.64722,2.35488L3.83861,6.61306 2.09777,7.09595 0,5z"/>
+				<!--bottom-->
+				<GeometryDrawing Brush="{StaticResource ThemePanoptesBrush}" Geometry="M2.34413,7.35036L6.61083,6.16437 7.09546,7.90223 5,10z"/>
+				<!--right-->
+				<GeometryDrawing Brush="{StaticResource ThemePanoptesBrush}" Geometry="M7.34663,7.65128L6.16120,3.38637 7.90049,2.90214 10,5z"/>
+				<!--top-->
+				<GeometryDrawing Brush="{StaticResource ThemePanoptesBrush}" Geometry="M7.64933,2.65118L3.38705,3.83371 2.90261,2.09143 5,0z"/>
+			</DrawingGroup>
+			
+		</Style.Resources>
+	</Style>
+</Styles>

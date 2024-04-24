@@ -1,0 +1,361 @@
+﻿using OxyPlot;
+using OxyPlot.Annotations;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+using QuantConnect.Orders;
+using Serilog;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Panoptes.ViewModels.Charts.OxyPlot
+{
+    /// <summary>
+    /// Represents an annotation that shows a point.
+    /// </summary>
+    public sealed class OrderAnnotation : ShapeAnnotation
+    {
+        /// <summary>
+        /// The position transformed to screen coordinates.
+        /// </summary>
+        private IList<ScreenPoint> _screenPositions;
+
+        private const int _lowLightAlpha = 150;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="OrderAnnotation"/> class.
+        /// </summary>
+        public OrderAnnotation(Order[] orders, IReadOnlyList<Series> referenceSeries) : this()
+        {
+            if (orders == null || orders.Length == 0)
+            {
+                throw new ArgumentException("Cannot be null or empty.", nameof(orders));
+            }
+
+            if (referenceSeries == null || referenceSeries.Count == 0)
+            {
+                throw new ArgumentException("Cannot be null or empty.", nameof(referenceSeries));
+            }
+
+            var dt = orders[0].Time;
+            if (orders.Any(o => o.Time != dt))
+            {
+                throw new ArgumentException("All orders should have same 'Time'.", nameof(orders));
+            }
+
+            List<DataPoint> centers = new List<DataPoint>();
+            foreach (var series in referenceSeries)
+            {
+                var x = DateTimeAxis.ToDouble(dt);
+                centers.Add(new DataPoint(x, GetNearestPointY(x, series))); // This is time consuming
+            }
+            Centers = centers;
+
+            OrderIds = orders.Select(o => o.Id).Distinct().ToArray();
+
+            if (orders.All(o => o.Direction == OrderDirection.Buy))
+            {
+                FillBase = OxyColors.Lime;
+                Direction = OrderDirection.Buy;
+            }
+            else if (orders.All(o => o.Direction == OrderDirection.Sell))
+            {
+                FillBase = OxyColors.Red;
+                Direction = OrderDirection.Sell;
+            }
+            else if (orders.All(o => o.Direction == OrderDirection.Hold))
+            {
+                FillBase = OxyColors.Cyan;
+                Direction = OrderDirection.Hold;
+            }
+            else
+            {
+                FillBase = OxyColors.Violet; // Mixed
+            }
+
+            Fill = OxyColor.FromAColor(_lowLightAlpha, FillBase);
+            Stroke = OxyColors.Undefined;
+            StrokeThickness = 0;
+            IsHighLighted = false;
+        }
+
+        private OrderAnnotation()
+        {
+            Size = 4;
+            TextMargin = 2;
+            TextVerticalAlignment = VerticalAlignment.Top;
+        }
+
+        public OrderDirection? Direction { get; }
+
+        public int[] OrderIds { get; }
+
+        public bool IsHighLighted { get; private set; }
+
+        public void HighLight()
+        {
+            if (IsHighLighted) return;
+            Fill = FillBase;
+            Stroke = OxyColors.White;
+            StrokeThickness = 1;
+            IsHighLighted = true;
+        }
+
+        public void LowLight()
+        {
+            if (!IsHighLighted) return;
+            Fill = OxyColor.FromAColor(_lowLightAlpha, FillBase);
+            Stroke = OxyColors.Undefined;
+            StrokeThickness = 0;
+            IsHighLighted = false;
+        }
+
+        public OxyColor FillBase { get; }
+
+        /// <summary>
+        /// Gets the points.
+        /// </summary>
+        /// <value>The points.</value>
+        public IReadOnlyList<DataPoint> Centers { get; }
+
+        /// <summary>
+        /// Gets or sets the size of the rendered point.
+        /// </summary>
+        public double Size { get; set; }
+
+        /// <summary>
+        /// Gets or sets the distance between the rendered point and the text.
+        /// </summary>
+        public double TextMargin { get; set; }
+
+        /// <summary>
+        /// Gets or sets a custom polygon outline for the point marker. Set <see cref="Shape" /> to <see cref="MarkerType.Custom" /> to use this property.
+        /// </summary>
+        /// <value>A polyline. The default is <c>null</c>.</value>
+        public ScreenPoint[] CustomOutline { get; }
+
+        /// <summary>
+        /// Renders the polygon annotation.
+        /// </summary>
+        /// <param name="rc">The render context.</param>
+        public override void Render(IRenderContext rc)
+        {
+            if (Centers == null || Centers.Count == 0)
+            {
+                return;
+            }
+
+            if (XAxis == null)
+            {
+                Log.Warning("OrderAnnotation.Render: Error - XAxis is null.");
+                return;
+            }
+
+            if (YAxis == null)
+            {
+                Log.Warning("OrderAnnotation.Render: Error - YAxis is null.");
+                return;
+            }
+
+            base.Render(rc);
+
+            var polygons = new List<IList<ScreenPoint>>();
+            var positions = new List<ScreenPoint>();
+            var clippingRectangle = GetClippingRect();
+            foreach (var center in Centers)
+            {
+                var screenPosition = Transform(center);
+                // clip to the area defined by the axes
+                if (!clippingRectangle.Contains(screenPosition))
+                {
+                    continue;
+                }
+
+                positions.Add(screenPosition);
+                polygons.Add(GetShape(Direction, screenPosition, Size));
+            }
+
+            if (IsHighLighted)
+            {
+                var x = Transform(Centers[0]).X;
+                rc.DrawLine(x, 0, x, 1000, OxyPen.Create(OxyColors.White, 1.0), this.EdgeRenderingMode);
+            }
+
+            if (polygons.Count == 0) return;
+
+            _screenPositions = positions.AsReadOnly();
+            rc.DrawPolygons(polygons, Fill, Stroke, StrokeThickness, this.EdgeRenderingMode);
+
+            //if (!string.IsNullOrEmpty(Text))
+            //{
+            //    var dx = -(int)TextHorizontalAlignment * (Size + TextMargin);
+            //    var dy = -(int)TextVerticalAlignment * (Size + TextMargin);
+            //    var textPosition = screenPosition + new ScreenVector(dx, dy);
+            //    rc.DrawClippedText(
+            //        clippingRectangle,
+            //        textPosition,
+            //        Text,
+            //        ActualTextColor,
+            //        ActualFont,
+            //        ActualFontSize,
+            //        ActualFontWeight,
+            //        TextRotation,
+            //        TextHorizontalAlignment,
+            //        TextVerticalAlignment);
+            //}
+        }
+
+        public override OxyRect GetClippingRect()
+        {
+            if (XAxis == null)
+            {
+                Log.Warning("OrderAnnotation.GetClippingRect: Error - XAxis is null.");
+                return new OxyRect();
+            }
+
+            if (YAxis == null)
+            {
+                Log.Warning("OrderAnnotation.GetClippingRect: Error - YAxis is null.");
+                return new OxyRect();
+            }
+
+            var rect = this.PlotModel.PlotArea;
+
+            //var axisRect = PlotElementUtilities.GetClippingRect(this);
+            var xrect = new OxyRect(XAxis.ScreenMin, XAxis.ScreenMax);
+            var yrect = new OxyRect(YAxis.ScreenMin, YAxis.ScreenMax);
+            var axisRect = xrect.Intersect(yrect);
+
+            var minX = 0d;
+            var maxX = double.PositiveInfinity;
+            var minY = 0d;
+            var maxY = double.PositiveInfinity;
+
+            if (this.ClipByXAxis)
+            {
+                minX = this.Orientate(axisRect.TopLeft).X;
+                maxX = this.Orientate(axisRect.BottomRight).X;
+            }
+
+            if (this.ClipByYAxis)
+            {
+                minY = this.Orientate(axisRect.TopLeft).Y;
+                maxY = this.Orientate(axisRect.BottomRight).Y;
+            }
+
+            var minPoint = this.Orientate(new ScreenPoint(minX, minY));
+            var maxPoint = this.Orientate(new ScreenPoint(maxX, maxY));
+
+            var axisClipRect = new OxyRect(minPoint, maxPoint);
+            return rect.Clip(axisClipRect);
+        }
+
+        /// <summary>
+        /// When overridden in a derived class, tests if the plot element is hit by the specified point.
+        /// </summary>
+        /// <param name="args">The hit test arguments.</param>
+        /// <returns>
+        /// The result of the hit test.
+        /// </returns>
+        protected override HitTestResult HitTestOverride(HitTestArguments args)
+        {
+            if (_screenPositions == null)
+            {
+                return null;
+            }
+
+            foreach (var screenPosition in _screenPositions)
+            {
+                if (screenPosition.DistanceTo(args.Point) < Size)
+                {
+                    return new HitTestResult(this, screenPosition);
+                }
+            }
+
+            return null;
+        }
+
+        private static double GetNearestPointY(double x, Series series)
+        {
+            var copy = new List<DataPoint>();
+            if (series is LineCandleStickSeries lcs)
+            {
+                if (lcs.Points.Count == 0)
+                {
+                    return double.NaN;
+                }
+
+                copy = lcs.Points.ToList();
+            }
+            else if (series is LineSeries l)
+            {
+                if (l.Points.Count == 0)
+                {
+                    return double.NaN;
+                }
+
+                copy = l.Points.ToList();
+            }
+
+            return OxyPlotExtensions.GetYCoordinateOnSeries(x, copy);
+        }
+
+        #region RenderingExtensions
+        /// <summary>
+        /// The vertical distance to the bottom points of the triangles.
+        /// </summary>
+        private static readonly double M1 = Math.Tan(Math.PI / 6);
+
+        /// <summary>
+        /// The vertical distance to the top points of the triangles.
+        /// </summary>
+        private static readonly double M2 = Math.Sqrt(1 + (M1 * M1));
+
+        /// <summary>
+        /// The horizontal/vertical distance to the end points of the stars.
+        /// </summary>
+        private static readonly double M3 = Math.Tan(Math.PI / 4);
+
+        private static ScreenPoint[] GetShape(OrderDirection? direction, ScreenPoint p, double size)
+        {
+            if (!direction.HasValue)
+            {
+                return new[]
+                {
+                    // Diamond
+                    new ScreenPoint(p.X, p.Y - (M2 * size)), new ScreenPoint(p.X + (M2 * size), p.Y),
+                    new ScreenPoint(p.X, p.Y + (M2 * size)), new ScreenPoint(p.X - (M2 * size), p.Y)
+                };
+            }
+
+            switch (direction)
+            {
+                case OrderDirection.Buy:
+                    return new[]
+                    {
+                        // Upward triangle
+                        new ScreenPoint(p.X - size, p.Y + (M1 * size)), new ScreenPoint(p.X + size, p.Y + (M1 * size)),
+                        new ScreenPoint(p.X, p.Y - (M2 * size))
+                    };
+
+                case OrderDirection.Sell:
+                    return new[]
+                    {
+                        // Downward triangle
+                        new ScreenPoint(p.X - size, p.Y - (M1 * size)), new ScreenPoint(p.X + size, p.Y - (M1 * size)),
+                        new ScreenPoint(p.X, p.Y + (M2 * size))
+                    };
+
+                case OrderDirection.Hold:
+                    var square = new OxyRect(p.X - size, p.Y - size, size * 2, size * 2);
+                    return new[]
+                    {
+                        square.TopLeft, square.TopRight, square.BottomRight, square.BottomLeft
+                    };
+            }
+
+            throw new NotImplementedException();
+        }
+        #endregion
+    }
+}
