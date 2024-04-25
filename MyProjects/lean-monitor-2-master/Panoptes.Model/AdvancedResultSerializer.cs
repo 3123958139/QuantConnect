@@ -24,7 +24,6 @@ namespace Panoptes.Model
         {
             _logger = logger;
             _resultConverter = resultConverter;
-            _options = DefaultJsonSerializerOptions.Default;
         }
 
         public async Task<Result> DeserializeAsync(string pathToResult, CancellationToken cancellationToken)

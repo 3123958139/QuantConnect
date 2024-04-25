@@ -26,7 +26,7 @@ namespace Panoptes.Model
             return new InstantChartPoint
             {
                 X = DateTimeOffset.FromUnixTimeSeconds(point.x), //Instant.FromUnixTimeSeconds(point.x),
-                Y = point.y
+                Y = (decimal)point.y
             };
         }
 
@@ -58,12 +58,12 @@ namespace Panoptes.Model
             };
         }
 
-        private static Dictionary<string, SeriesDefinition> MapToSeriesDefinitionDictionary(this IDictionary<string, Series> sourceSeries)
+        private static Dictionary<string, SeriesDefinition> MapToSeriesDefinitionDictionary(this IDictionary<string, BaseSeries> sourceSeries)
         {
-            return sourceSeries.ToDictionary(entry => entry.Key, entry => entry.Value.MapToSeriesDefinition());
+            return sourceSeries.ToDictionary(entry => entry.Key, entry => ((Series)entry.Value).MapToSeriesDefinition());
         }
 
-        private static Dictionary<string, Series> MapToSeriesDictionary(this IDictionary<string, SeriesDefinition> sourceSeries)
+        private static Dictionary<string, BaseSeries> MapToSeriesDictionary(this IDictionary<string, SeriesDefinition> sourceSeries)
         {
             return sourceSeries.ToDictionary(entry => entry.Key, entry => entry.Value.MapToSeries());
         }
@@ -78,11 +78,11 @@ namespace Panoptes.Model
                 ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol,
                 SeriesType = sourceSeries.SeriesType,
                 Unit = sourceSeries.Unit,
-                Values = sourceSeries.Values.ConvertAll(v => v.MapToTimeStampChartPoint())
+                Values = sourceSeries.Values.ConvertAll(v => ((ChartPoint)v).MapToTimeStampChartPoint())
             };
         }
 
-        private static Series MapToSeries(this SeriesDefinition sourceSeries)
+        private static BaseSeries MapToSeries(this SeriesDefinition sourceSeries)
         {
             return new Series
             {
@@ -92,7 +92,7 @@ namespace Panoptes.Model
                 ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol,
                 SeriesType = sourceSeries.SeriesType,
                 Unit = sourceSeries.Unit,
-                Values = sourceSeries.Values.ConvertAll(v => v.MapToChartPoint())
+                Values = sourceSeries.Values.ConvertAll(v => (ISeriesPoint)v.MapToChartPoint())
             };
         }
     }

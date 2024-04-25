@@ -11,7 +11,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="QuantConnect.Common" Version="2.5.14003" />
+	  <Reference Include="QuantConnect.Common">
+	    <HintPath>..\..\..\..\..\..\..\..\Lean\Lean-master\Launcher\bin\Debug\QuantConnect.Common.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 </Project>

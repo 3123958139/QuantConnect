@@ -5,10 +5,6 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panoptes.Model", "Panoptes.Model\Panoptes.Model.csproj", "{515FC703-20E0-4658-8433-5F06A68F4B75}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panoptes.Model.MongoDB", "Panoptes.Model.MongoDB\Panoptes.Model.MongoDB.csproj", "{657B25B8-2638-4823-BA45-C2B6E65BA517}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panoptes.Model.Mock", "Panoptes.Model.Mock\Panoptes.Model.Mock.csproj", "{3DB71FE5-D600-4509-A644-4F5511F6E5DB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panoptes.ViewModels", "Panoptes.ViewModels\Panoptes.ViewModels.csproj", "{BCF4ABDF-0749-4D8A-9417-6CA06906788B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BB810953-B530-450F-A1A3-0FE0863C608F}"
@@ -17,10 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panoptes", "Panoptes\Panoptes.csproj", "{B10B16CF-DC14-4DB8-B183-A9297EEF1F7C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Panoptes.Model.Tests", "Panoptes.Model.Tests\Panoptes.Model.Tests.csproj", "{826C6B48-6225-474D-AB60-1DDBF096A5E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Panoptes.QuantConnect", "Panoptes.QuantConnect\Panoptes.QuantConnect.csproj", "{AD2FBC96-CB45-42BC-A502-EE0405AED080}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,14 +24,6 @@ Global
 		{515FC703-20E0-4658-8433-5F06A68F4B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{515FC703-20E0-4658-8433-5F06A68F4B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{515FC703-20E0-4658-8433-5F06A68F4B75}.Release|Any CPU.Build.0 = Release|Any CPU
-		{657B25B8-2638-4823-BA45-C2B6E65BA517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{657B25B8-2638-4823-BA45-C2B6E65BA517}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{657B25B8-2638-4823-BA45-C2B6E65BA517}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{657B25B8-2638-4823-BA45-C2B6E65BA517}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3DB71FE5-D600-4509-A644-4F5511F6E5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DB71FE5-D600-4509-A644-4F5511F6E5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DB71FE5-D600-4509-A644-4F5511F6E5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DB71FE5-D600-4509-A644-4F5511F6E5DB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BCF4ABDF-0749-4D8A-9417-6CA06906788B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BCF4ABDF-0749-4D8A-9417-6CA06906788B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF4ABDF-0749-4D8A-9417-6CA06906788B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,14 +32,6 @@ Global
 		{B10B16CF-DC14-4DB8-B183-A9297EEF1F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B10B16CF-DC14-4DB8-B183-A9297EEF1F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B10B16CF-DC14-4DB8-B183-A9297EEF1F7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{826C6B48-6225-474D-AB60-1DDBF096A5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{826C6B48-6225-474D-AB60-1DDBF096A5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{826C6B48-6225-474D-AB60-1DDBF096A5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{826C6B48-6225-474D-AB60-1DDBF096A5E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD2FBC96-CB45-42BC-A502-EE0405AED080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD2FBC96-CB45-42BC-A502-EE0405AED080}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD2FBC96-CB45-42BC-A502-EE0405AED080}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD2FBC96-CB45-42BC-A502-EE0405AED080}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

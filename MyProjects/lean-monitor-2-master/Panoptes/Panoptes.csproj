@@ -45,8 +45,6 @@
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Panoptes.Model.Mock\Panoptes.Model.Mock.csproj" Condition=" '$(Configuration)' == 'Debug' " />
-		<ProjectReference Include="..\Panoptes.Model.MongoDB\Panoptes.Model.MongoDB.csproj" />
 		<ProjectReference Include="..\Panoptes.Model\Panoptes.Model.csproj" />
 		<ProjectReference Include="..\Panoptes.ViewModels\Panoptes.ViewModels.csproj" />
 	</ItemGroup>
@@ -58,5 +56,13 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="Newtonsoft.Json">
+	    <HintPath>..\..\..\..\..\..\..\..\Lean\Lean-master\Launcher\bin\Debug\Newtonsoft.Json.dll</HintPath>
+	  </Reference>
+	  <Reference Include="QuantConnect.Common">
+	    <HintPath>..\..\..\..\..\..\..\..\Lean\Lean-master\Launcher\bin\Debug\QuantConnect.Common.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 </Project>

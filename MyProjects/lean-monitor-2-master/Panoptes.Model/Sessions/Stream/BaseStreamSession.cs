@@ -4,10 +4,13 @@ using Panoptes.Model.Serialization.Packets;
 using System;
 using System.Collections.Concurrent;
 using System.ComponentModel;
-using System.Text.Json;
+using Newtonsoft.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using PacketType = QuantConnect.Packets.PacketType;
+using System.IO;
+using ProtoBuf.Serializers;
+using System.Reflection.Metadata;
 
 namespace Panoptes.Model.Sessions.Stream
 {
@@ -32,7 +35,7 @@ namespace Panoptes.Model.Sessions.Stream
         protected readonly int _port;
         protected readonly bool _closeAfterCompleted;
 
-        protected JsonSerializerOptions _options;
+        //protected JsonSerializerOptions _options;
 
         public string Name => $"{_host}:{_port}";
 
@@ -44,7 +47,7 @@ namespace Panoptes.Model.Sessions.Stream
             if (parameters == null) throw new ArgumentNullException(nameof(parameters));
 
             // Allow proper decoding of orders.
-            _options = DefaultJsonSerializerOptions.Default;
+            //_options = DefaultJsonSerializerOptions.Default;
 
             _sessionHandler = sessionHandler;
             _resultConverter = resultConverter;
@@ -266,57 +269,64 @@ namespace Panoptes.Model.Sessions.Stream
         /// <returns>Returns true if the packet was handled, otherwise false.</returns>
         protected bool HandlePacketEventsListener(string payload, PacketType packetType)
         {
-            // TODO: check https://devblogs.microsoft.com/dotnet/try-the-new-system-text-json-source-generator/
-            try
+            JsonSerializer jsonSerializer = new JsonSerializer();
+            using (var stringReader = new System.IO.StringReader(payload))
             {
-                switch (packetType)
+                using (var jsonTextReader = new JsonTextReader(stringReader))
                 {
-                    case PacketType.AlgorithmStatus:
-                        _packetQueue.Add(JsonSerializer.Deserialize<AlgorithmStatusPacket>(payload, _options));
-                        break;
+                    // TODO: check https://devblogs.microsoft.com/dotnet/try-the-new-system-text-json-source-generator/
+                    try
+                    {
+                        switch (packetType)
+                        {
+                            case PacketType.AlgorithmStatus:
+                                _packetQueue.Add(jsonSerializer.Deserialize<AlgorithmStatusPacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.LiveNode:
-                        _packetQueue.Add(JsonSerializer.Deserialize<LiveNodePacket>(payload, _options));
-                        break;
+                            case PacketType.LiveNode:
+                                _packetQueue.Add(jsonSerializer.Deserialize<LiveNodePacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.AlgorithmNode:
-                        _packetQueue.Add(JsonSerializer.Deserialize<AlgorithmNodePacket>(payload, _options));
-                        break;
+                            case PacketType.AlgorithmNode:
+                                _packetQueue.Add(jsonSerializer.Deserialize<AlgorithmNodePacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.LiveResult:
-                        _packetQueue.Add(JsonSerializer.Deserialize<LiveResultPacket>(payload, _options));
-                        break;
+                            case PacketType.LiveResult:
+                                _packetQueue.Add(jsonSerializer.Deserialize<LiveResultPacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.BacktestResult:
-                        _packetQueue.Add(JsonSerializer.Deserialize<BacktestResultPacket>(payload, _options));
-                        break;
+                            case PacketType.BacktestResult:
+                                _packetQueue.Add(jsonSerializer.Deserialize<BacktestResultPacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.OrderEvent:
-                        _packetQueue.Add(JsonSerializer.Deserialize<OrderEventPacket>(payload, _options));
-                        break;
+                            case PacketType.OrderEvent:
+                                _packetQueue.Add(jsonSerializer.Deserialize<OrderEventPacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.Log:
-                        _packetQueue.Add(JsonSerializer.Deserialize<LogPacket>(payload, _options));
-                        break;
+                            case PacketType.Log:
+                                _packetQueue.Add(jsonSerializer.Deserialize<LogPacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.Debug:
-                        _packetQueue.Add(JsonSerializer.Deserialize<DebugPacket>(payload, _options));
-                        break;
+                            case PacketType.Debug:
+                                _packetQueue.Add(jsonSerializer.Deserialize<DebugPacket>(jsonTextReader));
+                                break;
 
-                    case PacketType.HandledError:
-                        _packetQueue.Add(JsonSerializer.Deserialize<HandledErrorPacket>(payload, _options));
-                        break;
+                            case PacketType.HandledError:
+                                _packetQueue.Add(jsonSerializer.Deserialize<HandledErrorPacket>(jsonTextReader));
+                                break;
 
-                    default:
-                        _logger.LogWarning("BaseStreamSession.HandlePacketEventsListener: Unknown packet type '{packetType}'.", packetType);
+                            default:
+                                _logger.LogWarning("BaseStreamSession.HandlePacketEventsListener: Unknown packet type '{packetType}'.", packetType);
+                                return false;
+                        }
+                        return true;
+                    }
+                    catch (ObjectDisposedException)
+                    {
+                        _logger.LogWarning("BaseStreamSession.HandlePacketEventsListener: Queue is disposed.");
                         return false;
+                    }
                 }
-                return true;
-            }
-            catch (ObjectDisposedException)
-            {
-                _logger.LogWarning("BaseStreamSession.HandlePacketEventsListener: Queue is disposed.");
-                return false;
             }
         }
         #endregion

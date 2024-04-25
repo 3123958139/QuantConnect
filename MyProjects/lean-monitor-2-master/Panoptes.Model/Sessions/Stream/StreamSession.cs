@@ -36,7 +36,7 @@ namespace Panoptes.Model.Sessions.Stream
                         if (message.FrameCount != 1) continue;
 
                         var payload = message[0].ConvertToString(Encoding.UTF8);
-                        var packet = JsonSerializer.Deserialize<Packet>(payload, _options);
+                        var packet = JsonSerializer.Deserialize<Packet>(payload);
                         HandlePacketEventsListener(payload, packet.Type);
                     }
                 }
