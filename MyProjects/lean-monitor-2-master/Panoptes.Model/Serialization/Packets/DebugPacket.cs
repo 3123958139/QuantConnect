@@ -16,7 +16,8 @@
 
 // https://github.com/QuantConnect/Lean/blob/master/Common/Packets/DebugPacket.cs
 
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using PacketType = QuantConnect.Packets.PacketType;
 
 namespace Panoptes.Model.Serialization.Packets
@@ -29,32 +30,32 @@ namespace Panoptes.Model.Serialization.Packets
         /// <summary>
         /// String debug message to send to the users console
         /// </summary>
-        [JsonPropertyName("sMessage")]
+        [JsonProperty(PropertyName ="sMessage")]
         public string Message;
 
         /// <summary>
         /// Associated algorithm Id.
         /// </summary>
-        [JsonPropertyName("sAlgorithmID")]
+        [JsonProperty(PropertyName ="sAlgorithmID")]
         public string AlgorithmId;
 
         /// <summary>
         /// Compile id of the algorithm sending this message
         /// </summary>
-        [JsonPropertyName("sCompileID")]
+        [JsonProperty(PropertyName ="sCompileID")]
         public string CompileId;
 
         /// <summary>
         /// Project Id for this message
         /// </summary>
-        [JsonPropertyName("iProjectID")]
+        [JsonProperty(PropertyName ="iProjectID")]
         public int ProjectId;
 
         /// <summary>
         /// True to emit message as a popup notification (toast),
         /// false to emit message in console as text
         /// </summary>
-        [JsonPropertyName("bToast")]
+        [JsonProperty(PropertyName ="bToast")]
         public bool Toast;
 
         /// <summary>

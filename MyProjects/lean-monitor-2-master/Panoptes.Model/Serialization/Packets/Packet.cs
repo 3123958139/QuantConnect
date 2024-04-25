@@ -16,7 +16,8 @@
 
 // https://github.com/QuantConnect/Lean/blob/master/Common/Packets/Packet.cs
 
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using PacketType = QuantConnect.Packets.PacketType;
 
 namespace Panoptes.Model.Serialization.Packets
@@ -29,13 +30,13 @@ namespace Panoptes.Model.Serialization.Packets
         /// <summary>
         /// Packet type defined by a string enum
         /// </summary>
-        [JsonPropertyName("eType")]
+        [JsonProperty(PropertyName = "eType")]
         public PacketType Type { get; set; } = PacketType.None;
 
         /// <summary>
         /// User unique specific channel endpoint to send the packets
         /// </summary>
-        [JsonPropertyName("sChannel")]
+        [JsonProperty(PropertyName = "sChannel")]
         public virtual string Channel { get; set; } = "";
 
         /// <summary>

@@ -4,8 +4,8 @@ using NetMQ.Sockets;
 using Panoptes.Model.Serialization.Packets;
 using System;
 using System.ComponentModel;
+using Newtonsoft.Json;
 using System.Text;
-using System.Text.Json;
 
 namespace Panoptes.Model.Sessions.Stream
 {
@@ -32,12 +32,19 @@ namespace Panoptes.Model.Sessions.Stream
                             continue;
                         }
 
-                        // There should only be 1 part messages
-                        if (message.FrameCount != 1) continue;
-
-                        var payload = message[0].ConvertToString(Encoding.UTF8);
-                        var packet = JsonSerializer.Deserialize<Packet>(payload);
-                        HandlePacketEventsListener(payload, packet.Type);
+                        try
+                        {
+                            // There should only be 1 part messages
+                            if (message.FrameCount != 1) continue;
+                            var data = message[0];
+                            var payload = data.ConvertToString(Encoding.UTF8);
+                            var packet = JsonConvert.DeserializeObject<Packet>(payload);
+                            HandlePacketEventsListener(payload, packet.Type);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.ToString());
+                        }
                     }
                 }
             }
