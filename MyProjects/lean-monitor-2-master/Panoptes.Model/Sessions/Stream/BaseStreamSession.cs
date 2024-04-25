@@ -290,9 +290,9 @@ namespace Panoptes.Model.Sessions.Stream
                     //    _packetQueue.Add(JsonConvert.DeserializeObject<LiveResultPacket>(payload));
                     //    break;
 
-                    //case PacketType.BacktestResult:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<BacktestResultPacket>(payload));
-                    //    break;
+                    case PacketType.BacktestResult:
+                        _packetQueue.Add(JsonConvert.DeserializeObject<BacktestResultPacket>(payload));
+                        break;
 
                     //case PacketType.OrderEvent:
                     //    _packetQueue.Add(JsonConvert.DeserializeObject<OrderEventPacket>(payload));

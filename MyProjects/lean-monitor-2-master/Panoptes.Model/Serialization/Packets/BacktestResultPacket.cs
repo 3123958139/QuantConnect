@@ -22,7 +22,8 @@ using QuantConnect.Statistics;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using BacktestResultParameters = QuantConnect.Packets.BacktestResultParameters;
 using PacketType = QuantConnect.Packets.PacketType;
 
@@ -36,91 +37,91 @@ namespace Panoptes.Model.Serialization.Packets
         /// <summary>
         /// User Id placing this task
         /// </summary>
-        [JsonPropertyName("iUserID")]
+        [JsonProperty(PropertyName ="iUserID")]
         public int UserId = 0;
 
         /// <summary>
         /// Project Id of the this task.
         /// </summary>
-        [JsonPropertyName("iProjectID")]
+        [JsonProperty(PropertyName ="iProjectID")]
         public int ProjectId = 0;
 
         /// <summary>
         /// User Session Id
         /// </summary>
-        [JsonPropertyName("sSessionID")]
+        [JsonProperty(PropertyName ="sSessionID")]
         public string SessionId = "";
 
         /// <summary>
         /// BacktestId for this result packet
         /// </summary>
-        [JsonPropertyName("sBacktestID")]
+        [JsonProperty(PropertyName ="sBacktestID")]
         public string BacktestId = "";
 
         /// <summary>
         /// OptimizationId for this result packet if any
         /// </summary>
-        [JsonPropertyName("sOptimizationID")]
+        [JsonProperty(PropertyName ="sOptimizationID")]
         public string OptimizationId;
 
         /// <summary>
         /// Compile Id for the algorithm which generated this result packet.
         /// </summary>
-        [JsonPropertyName("sCompileID")]
+        [JsonProperty(PropertyName ="sCompileID")]
         public string CompileId = "";
 
         /// <summary>
         /// Start of the backtest period as defined in Initialize() method.
         /// </summary>
-        [JsonPropertyName("dtPeriodStart")]
+        [JsonProperty(PropertyName ="dtPeriodStart")]
         public DateTime PeriodStart = DateTime.Now;
 
         /// <summary>
         /// End of the backtest period as defined in the Initialize() method.
         /// </summary>
-        [JsonPropertyName("dtPeriodFinish")]
+        [JsonProperty(PropertyName ="dtPeriodFinish")]
         public DateTime PeriodFinish = DateTime.Now;
 
         /// <summary>
         /// DateTime (EST) the user requested this backtest.
         /// </summary>
-        [JsonPropertyName("dtDateRequested")]
+        [JsonProperty(PropertyName ="dtDateRequested")]
         public DateTime DateRequested = DateTime.Now;
 
         /// <summary>
         /// DateTime (EST) when the backtest was completed.
         /// </summary>
-        [JsonPropertyName("dtDateFinished")]
+        [JsonProperty(PropertyName ="dtDateFinished")]
         public DateTime DateFinished = DateTime.Now;
 
         /// <summary>
         /// Progress of the backtest as a percentage from 0-1 based on the days lapsed from start-finish.
         /// </summary>
-        [JsonPropertyName("dProgress")]
+        [JsonProperty(PropertyName ="dProgress")]
         public decimal Progress = 0;
 
         /// <summary>
         /// Name of this backtest.
         /// </summary>
-        [JsonPropertyName("sName")]
+        [JsonProperty(PropertyName ="sName")]
         public string Name = String.Empty;
 
         /// <summary>
         /// Result data object for this backtest
         /// </summary>
-        [JsonPropertyName("oResults")]
+        [JsonProperty(PropertyName ="oResults")]
         public BacktestResult Results = new BacktestResult();
 
         /// <summary>
         /// Processing time of the algorithm (from moment the algorithm arrived on the algorithm node)
         /// </summary>
-        [JsonPropertyName("dProcessingTime")]
+        [JsonProperty(PropertyName ="dProcessingTime")]
         public double ProcessingTime = 0;
 
         /// <summary>
         /// Estimated number of tradeable days in the backtest based on the start and end date or the backtest
         /// </summary>
-        [JsonPropertyName("iTradeableDates")]
+        [JsonProperty(PropertyName ="iTradeableDates")]
         public int TradeableDates = 0;
 
         /// <summary>

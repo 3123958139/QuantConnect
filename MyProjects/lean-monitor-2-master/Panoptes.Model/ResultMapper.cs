@@ -29,6 +29,14 @@ namespace Panoptes.Model
                 Y = (decimal)point.y
             };
         }
+        private static InstantChartPoint MapToTimeStampChartPoint(this Candlestick point)
+        {
+            return new InstantChartPoint
+            {
+                X = point.Time, //Instant.FromUnixTimeSeconds(point.x),
+                Y = (decimal)point.Low
+            };
+        }
 
         private static ChartPoint MapToChartPoint(this InstantChartPoint point)
         {
@@ -60,7 +68,14 @@ namespace Panoptes.Model
 
         private static Dictionary<string, SeriesDefinition> MapToSeriesDefinitionDictionary(this IDictionary<string, BaseSeries> sourceSeries)
         {
-            return sourceSeries.ToDictionary(entry => entry.Key, entry => ((Series)entry.Value).MapToSeriesDefinition());
+            try
+            {
+                return sourceSeries.ToDictionary(entry => entry.Key, entry => ((Series)entry.Value).MapToSeriesDefinition());
+            }
+            catch
+            {
+                return sourceSeries.ToDictionary(entry => entry.Key, entry => entry.Value.MapToSeriesDefinition());
+            }
         }
 
         private static Dictionary<string, BaseSeries> MapToSeriesDictionary(this IDictionary<string, SeriesDefinition> sourceSeries)
@@ -76,6 +91,35 @@ namespace Panoptes.Model
                 Index = sourceSeries.Index,
                 Name = sourceSeries.Name,
                 ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol,
+                SeriesType = sourceSeries.SeriesType,
+                Unit = sourceSeries.Unit,
+                Values = sourceSeries.Values.ConvertAll(v => ((ChartPoint)v).MapToTimeStampChartPoint())
+            };
+        }
+
+        private static SeriesDefinition MapToSeriesDefinition(this BaseSeries sourceSeries)
+        {
+            switch(sourceSeries.SeriesType)
+            {
+                case SeriesType.Candle:
+                    return new SeriesDefinition
+                    {
+                        //Color = sourceSeries.Color,
+                        Index = sourceSeries.Index,
+                        Name = sourceSeries.Name,
+                        //ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol,
+                        SeriesType = sourceSeries.SeriesType,
+                        Unit = sourceSeries.Unit,
+                        Values = sourceSeries.Values.ConvertAll(v => ((Candlestick)v).MapToTimeStampChartPoint())
+                    };
+
+            }
+            return new SeriesDefinition
+            {
+                //Color = sourceSeries.Color,
+                Index = sourceSeries.Index,
+                Name = sourceSeries.Name,
+                //ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol,
                 SeriesType = sourceSeries.SeriesType,
                 Unit = sourceSeries.Unit,
                 Values = sourceSeries.Values.ConvertAll(v => ((ChartPoint)v).MapToTimeStampChartPoint())

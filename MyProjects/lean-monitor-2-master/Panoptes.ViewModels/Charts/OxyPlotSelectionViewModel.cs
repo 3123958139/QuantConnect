@@ -788,6 +788,9 @@ namespace Panoptes.ViewModels.Charts
         {
             foreach (var chart in result.Charts.OrderBy(x => x.Key))
             {
+                if (chart.Value.Series == null) 
+                    continue;
+
                 if (!_plotModelsDict.TryGetValue(chart.Key, out var plot))
                 {
                     // Create Plot

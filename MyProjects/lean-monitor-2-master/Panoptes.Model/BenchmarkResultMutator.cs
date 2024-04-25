@@ -3,6 +3,7 @@ using QuantConnect;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 
 namespace Panoptes.Model
 {
@@ -10,36 +11,45 @@ namespace Panoptes.Model
     {
         public void Mutate(Result result)
         {
-            if (!result.Charts.ContainsKey("Benchmark")) return;
-            var benchmarkChart = result.Charts["Benchmark"];
-
-            if (!benchmarkChart.Series.ContainsKey("Benchmark")) return;
-            var benchmarkSeries = benchmarkChart.Series["Benchmark"];
-
-            if (!result.Charts.ContainsKey("Strategy Equity")) return;
-            var equityChart = result.Charts["Strategy Equity"];
-
-            if (!equityChart.Series.ContainsKey("Equity")) return;
-            var equitySeries = equityChart.Series["Equity"];
-
-            var benchmarkLastUpdated = DateTimeOffset.MinValue;
-            SeriesDefinition relativeBenchmarkSeries;
-            if (!equityChart.Series.ContainsKey("Relative Benchmark"))
+            try
             {
-                relativeBenchmarkSeries = new SeriesDefinition
+                if (!result.Charts.ContainsKey("Benchmark")) return;
+                var benchmarkChart = result.Charts["Benchmark"];
+
+                if (!benchmarkChart.Series.ContainsKey("Benchmark")) return;
+                var benchmarkSeries = benchmarkChart.Series["Benchmark"];
+
+                if (!result.Charts.ContainsKey("Strategy Equity")) return;
+                var equityChart = result.Charts["Strategy Equity"];
+
+                if (equityChart.Series == null) return;
+
+                if (!equityChart.Series.ContainsKey("Equity")) return;
+                var equitySeries = equityChart.Series["Equity"];
+
+                var benchmarkLastUpdated = DateTimeOffset.MinValue;
+                SeriesDefinition relativeBenchmarkSeries;
+                if (!equityChart.Series.ContainsKey("Relative Benchmark"))
                 {
-                    SeriesType = SeriesType.Line,
-                    Name = "Relative Benchmark"
-                };
-                equityChart.Series.Add("Relative Benchmark", relativeBenchmarkSeries);
-            }
-            else
-            {
-                relativeBenchmarkSeries = equityChart.Series["Relative Benchmark"];
-                benchmarkLastUpdated = relativeBenchmarkSeries.Values.Last().X;
-            }
+                    relativeBenchmarkSeries = new SeriesDefinition
+                    {
+                        SeriesType = SeriesType.Line,
+                        Name = "Relative Benchmark"
+                    };
+                    equityChart.Series.Add("Relative Benchmark", relativeBenchmarkSeries);
+                }
+                else
+                {
+                    relativeBenchmarkSeries = equityChart.Series["Relative Benchmark"];
+                    benchmarkLastUpdated = relativeBenchmarkSeries.Values.Last().X;
+                }
 
-            Update(relativeBenchmarkSeries, benchmarkSeries, equitySeries, benchmarkLastUpdated);
+                Update(relativeBenchmarkSeries, benchmarkSeries, equitySeries, benchmarkLastUpdated);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private static void Update(SeriesDefinition relativeBenchmarkSeries, SeriesDefinition benchmarkSeries, SeriesDefinition equitySeries, DateTimeOffset lastUpdate)
