@@ -33,7 +33,7 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Limit price for this order.
         /// </summary>
-        public decimal LimitPrice { get; internal set; }
+        public decimal LimitPrice { get; set; }
 
         /// <summary>
         /// Added a default constructor for JSON Deserialization:

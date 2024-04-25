@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Toolkit.Mvvm.Messaging;
 using Panoptes.Model;
 using Panoptes.Model.Messages;
-using Panoptes.Model.MongoDB.Sessions;
 using Panoptes.Model.Serialization.Packets;
 using Panoptes.Model.Sessions;
 using Panoptes.Model.Sessions.File;
@@ -64,9 +63,7 @@ namespace Panoptes
 
         private void OnMinute(object? state)
         {
-#if DEBUG
-            _logger.LogDebug("OnMinute: GC.GetTotalMemory={0:0.0}MB", GC.GetTotalMemory(false) / 1048576);
-#endif
+
 
             var utcNow = DateTime.UtcNow;
 
@@ -277,28 +274,12 @@ namespace Panoptes
             // Because Open() is now call async, it's not the case anymore
             // https://stackoverflow.com/questions/7075491/why-is-synchronizationcontext-current-null
 
-            if (parameters is MongoSessionParameters mongoParameters)
-            {
-                if (string.IsNullOrWhiteSpace(mongoParameters.Host))
-                {
-                    throw new ArgumentException("SessionService.Open: Host is required.", nameof(parameters));
-                }
-
-                // Open a new session and open it
-                await Dispatcher.UIThread.InvokeAsync(() => session = new MongoSession(this, _resultConverter, mongoParameters, _logger)).ConfigureAwait(false);
-            }
-            else if (parameters is StreamSessionParameters streamParameters)
+            if (parameters is StreamSessionParameters streamParameters)
             {
                 if (string.IsNullOrWhiteSpace(streamParameters.Host))
                 {
                     throw new ArgumentException("SessionService.Open: Host is required.", nameof(parameters));
                 }
-
-                // Open a new session and open it
-#if DEBUG
-                var mockMessageHandler = new Model.Mock.MockStreamingMessageHandler(streamParameters);
-                Task.Run(() => mockMessageHandler.Initialize(), cancellationToken);
-#endif
                 await Dispatcher.UIThread.InvokeAsync(() => session = new StreamSession(this, _resultConverter, streamParameters, _logger)).ConfigureAwait(false);
             }
             else if (parameters is FileSessionParameters fileParameters)

@@ -143,9 +143,6 @@ namespace Panoptes.ViewModels.Panels
                 DisplayLoading = true;
                 Logger.LogInformation("HoldingsPanelViewModel: Start applying '{search}' filters...", search);
 
-#if DEBUG
-                //await Task.Delay(2000, cancellationToken).ConfigureAwait(false);
-#endif
 
                 var (Add, Remove) = await GetFilteredHoldings(search, cancellationToken).ConfigureAwait(false);
 

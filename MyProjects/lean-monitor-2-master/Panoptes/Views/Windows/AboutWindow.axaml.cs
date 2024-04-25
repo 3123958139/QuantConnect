@@ -9,9 +9,7 @@ namespace Panoptes.Views.Windows
         public AboutWindow()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
+
         }
 
         private void InitializeComponent()

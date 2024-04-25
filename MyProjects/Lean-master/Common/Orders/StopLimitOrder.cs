@@ -27,17 +27,17 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Stop price for this stop market order.
         /// </summary>
-        public decimal StopPrice { get; internal set; }
+        public decimal StopPrice { get; set; }
 
         /// <summary>
         /// Signal showing the "StopLimitOrder" has been converted into a Limit Order
         /// </summary>
-        public bool StopTriggered { get; internal set; }
+        public bool StopTriggered { get; set; }
 
         /// <summary>
         /// Limit price for the stop limit order
         /// </summary>
-        public decimal LimitPrice { get; internal set; }
+        public decimal LimitPrice { get; set; }
 
         /// <summary>
         /// StopLimit Order Type

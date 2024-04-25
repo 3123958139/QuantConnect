@@ -19,9 +19,7 @@ namespace Panoptes.Views.Windows
         public TradeInfoWindow()
         {
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
+
 
             KeyDown += TradeInfoWindow_KeyDown;
         }

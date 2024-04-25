@@ -57,10 +57,7 @@ namespace Panoptes.Views.Panels
             }
             catch (Exception ex)
             {
-#if DEBUG
-                // We might be in xaml render mode - we don't want to throw
-                return;
-#endif
+
                 throw;
             }
         }
@@ -128,9 +125,7 @@ namespace Panoptes.Views.Panels
                 else
                 {
                     var tradeInfoWindow = new TradeInfoWindow(order);
-#if DEBUG
-                    tradeInfoWindow.AttachDevTools();
-#endif
+
 
                     tradeInfoWindow.Closed += TradeInfoWindow_Closed;
                     _openWindows.TryAdd(order.Id, tradeInfoWindow);

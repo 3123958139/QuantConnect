@@ -81,49 +81,49 @@ namespace QuantConnect
         /// <summary>
         /// The date that this instance is associated with
         /// </summary>
-        public DateTime Date { get; internal set; }
+        public DateTime Date { get; set; }
 
         /// <summary>
         /// Property returns true, if the day is a business day
         /// </summary>
-        public bool BusinessDay { get; internal set; }
+        public bool BusinessDay { get; set; }
 
         /// <summary>
         /// Property returns true, if the day is a public holiday
         /// </summary>
-        public bool PublicHoliday { get; internal set; }
+        public bool PublicHoliday { get; set; }
 
         /// <summary>
         /// Property returns true, if the day is a weekend
         /// </summary>
-        public bool Weekend { get; internal set; }
+        public bool Weekend { get; set; }
 
         /// <summary>
         /// Property returns the list of options (among currently traded) that expire on this day
         /// </summary>
-        public IEnumerable<Symbol> OptionExpirations { get; internal set; }
+        public IEnumerable<Symbol> OptionExpirations { get; set; }
 
         /// <summary>
         /// Property returns the list of futures (among currently traded) that expire on this day
         /// </summary>
-        public IEnumerable<Symbol> FutureExpirations { get; internal set; }
+        public IEnumerable<Symbol> FutureExpirations { get; set; }
 
         /// <summary>
         /// Property returns the list of futures (among currently traded) that roll forward on this day
         /// </summary>
         /// <remarks>Not used yet. For future use.</remarks>
-        public IEnumerable<Symbol> FutureRolls { get; internal set; }
+        public IEnumerable<Symbol> FutureRolls { get; set; }
 
         /// <summary>
         /// Property returns the list of symbols (among currently traded) that are delisted on this day
         /// </summary>
         /// <remarks>Not used yet. For future use.</remarks>
-        public IEnumerable<Symbol> SymbolDelistings { get; internal set; }
+        public IEnumerable<Symbol> SymbolDelistings { get; set; }
 
         /// <summary>
         /// Property returns the list of symbols (among currently traded) that have ex-dividend date on this day
         /// </summary>
         /// <remarks>Not used yet. For future use.</remarks>
-        public IEnumerable<Symbol> EquityDividends { get; internal set; }
+        public IEnumerable<Symbol> EquityDividends { get; set; }
     }
 }

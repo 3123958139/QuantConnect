@@ -180,9 +180,7 @@ namespace Panoptes.ViewModels.Panels
                 DisplayLoading = true;
                 Logger.LogInformation("CashBookPanelViewModel: Start applying '{search}' filters...", search);
 
-#if DEBUG
-                //await Task.Delay(2000, cancellationToken).ConfigureAwait(false);
-#endif
+
 
                 var (Add, Remove) = await GetFilteredCashes(search, cancellationToken).ConfigureAwait(false);
 

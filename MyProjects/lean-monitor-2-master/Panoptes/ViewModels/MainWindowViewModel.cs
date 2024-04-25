@@ -101,9 +101,7 @@ namespace Panoptes.ViewModels
 
             Title = $"{Global.AppName} - LEAN Algorithm Monitor - {Global.AppVersion} - {Global.MachineName}";
 
-#if DEBUG
-            Title = "[DEBUG] " + Title;
-#endif
+
 
             ExitCommand = new RelayCommand(() =>
             {

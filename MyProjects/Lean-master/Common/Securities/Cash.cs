@@ -66,7 +66,7 @@ namespace QuantConnect.Securities
             {
                 return _currencyConversion;
             }
-            internal set
+            set
             {
 
                 var lastConversionRate = 0m;
@@ -118,7 +118,7 @@ namespace QuantConnect.Securities
             {
                 return _currencyConversion.ConversionRate;
             }
-            internal set
+            set
             {
                 if (_currencyConversion == null)
                 {

@@ -62,7 +62,7 @@
 	    <HintPath>..\..\..\..\..\..\..\..\Lean\Lean-master\Launcher\bin\Debug\Newtonsoft.Json.dll</HintPath>
 	  </Reference>
 	  <Reference Include="QuantConnect.Common">
-	    <HintPath>..\..\..\..\..\..\..\..\Lean\Lean-master\Launcher\bin\Debug\QuantConnect.Common.dll</HintPath>
+	    <HintPath>..\..\Lean-master\Common\bin\Debug\QuantConnect.Common.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 </Project>

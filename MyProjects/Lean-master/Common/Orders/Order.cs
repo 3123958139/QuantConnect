@@ -37,22 +37,22 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Order ID.
         /// </summary>
-        public int Id { get; internal set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Order id to process before processing this order.
         /// </summary>
-        public int ContingentId { get; internal set; }
+        public int ContingentId { get; set; }
 
         /// <summary>
         /// Brokerage Id for this order for when the brokerage splits orders into multiple pieces
         /// </summary>
-        public List<string> BrokerId { get; internal set; }
+        public List<string> BrokerId { get; set; }
 
         /// <summary>
         /// Symbol of the Asset
         /// </summary>
-        public Symbol Symbol { get; internal set; }
+        public Symbol Symbol { get; set; }
 
         /// <summary>
         /// Price of the Order.
@@ -60,18 +60,18 @@ namespace QuantConnect.Orders
         public decimal Price
         {
             get { return _price; }
-            internal set { _price = value.Normalize(); }
+            set { _price = value.Normalize(); }
         }
 
         /// <summary>
         /// Currency for the order price
         /// </summary>
-        public string PriceCurrency { get; internal set; }
+        public string PriceCurrency { get; set; }
 
         /// <summary>
         /// Gets the utc time the order was created.
         /// </summary>
-        public DateTime Time { get; internal set; }
+        public DateTime Time { get; set; }
 
         /// <summary>
         /// Gets the utc time this order was created. Alias for <see cref="Time"/>
@@ -82,19 +82,19 @@ namespace QuantConnect.Orders
         /// Gets the utc time the last fill was received, or null if no fills have been received
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime? LastFillTime { get; internal set; }
+        public DateTime? LastFillTime { get; set; }
 
         /// <summary>
         /// Gets the utc time this order was last updated, or null if the order has not been updated.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime? LastUpdateTime { get; internal set; }
+        public DateTime? LastUpdateTime { get; set; }
 
         /// <summary>
         /// Gets the utc time this order was canceled, or null if the order was not canceled.
         /// </summary>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime? CanceledTime { get; internal set; }
+        public DateTime? CanceledTime { get; set; }
 
         /// <summary>
         /// Number of shares to execute.
@@ -102,7 +102,7 @@ namespace QuantConnect.Orders
         public virtual decimal Quantity
         {
             get { return _quantity; }
-            internal set { _quantity = value.Normalize(); }
+            set { _quantity = value.Normalize(); }
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace QuantConnect.Orders
         /// Tag the order with some custom data
         /// </summary>
         [DefaultValue(""), JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string Tag { get; internal set; }
+        public string Tag { get; set; }
 
         /// <summary>
         /// Additional properties of the order
@@ -171,7 +171,7 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Gets the price data at the time the order was submitted
         /// </summary>
-        public OrderSubmissionData OrderSubmissionData { get; internal set; }
+        public OrderSubmissionData OrderSubmissionData { get; set; }
 
         /// <summary>
         /// Returns true if the order is a marketable order.

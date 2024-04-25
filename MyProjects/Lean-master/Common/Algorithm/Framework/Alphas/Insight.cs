@@ -93,7 +93,7 @@ namespace QuantConnect.Algorithm.Framework.Alphas
         /// <summary>
         /// Gets the period over which this insight is expected to come to fruition
         /// </summary>
-        public TimeSpan Period { get; internal set; }
+        public TimeSpan Period { get; set; }
 
         /// <summary>
         /// Gets the predicted percent change in the insight type (price/volatility)

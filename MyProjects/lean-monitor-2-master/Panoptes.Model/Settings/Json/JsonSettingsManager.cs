@@ -32,10 +32,7 @@ namespace Panoptes.Model.Settings.Json
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
 
-#if DEBUG
-            // To allow display of Avalonia xaml
-            UserSettings = new UserSettings.DefaultUserSettings();
-#endif
+
         }
 
         /// <inheritdoc/>

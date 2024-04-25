@@ -23,9 +23,7 @@ namespace Panoptes.Views.Windows
             }
 
             InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
+
             _statusLabel = this.Get<Label>("_statusLabel");
             _statusLabel.Content = $"Opening {Global.AppName}...";
 

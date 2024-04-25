@@ -26,12 +26,12 @@ namespace QuantConnect.Orders
         /// <summary>
         /// Trailing amount for this trailing stop order
         /// </summary>
-        public decimal TrailingAmount { get; internal set; }
+        public decimal TrailingAmount { get; set; }
 
         /// <summary>
         /// Determines whether the <see cref="TrailingAmount"/> is a percentage or an absolute currency value
         /// </summary>
-        public bool TrailingAsPercentage { get; internal set; }
+        public bool TrailingAsPercentage { get; set; }
 
         /// <summary>
         /// StopLimit Order Type

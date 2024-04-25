@@ -36,17 +36,17 @@ namespace QuantConnect.Orders
         /// <summary>
         /// The price which, when touched, will trigger the setting of a limit order at <see cref="LimitPrice"/>.
         /// </summary>
-        public decimal TriggerPrice { get; internal set; }
+        public decimal TriggerPrice { get; set; }
 
         /// <summary>
         /// The price at which to set the limit order following <see cref="TriggerPrice"/> being touched.
         /// </summary>
-        public decimal LimitPrice { get; internal set; }
+        public decimal LimitPrice { get; set; }
 
         /// <summary>
         /// Whether or not the <see cref="TriggerPrice"/> has been touched.
         /// </summary>
-        public bool TriggerTouched { get; internal set; }
+        public bool TriggerTouched { get; set; }
 
         /// <summary>
         /// New <see cref="LimitIfTouchedOrder"/> constructor.

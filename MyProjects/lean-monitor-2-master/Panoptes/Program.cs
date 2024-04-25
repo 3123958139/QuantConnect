@@ -17,10 +17,7 @@ namespace Panoptes
             {
                 string logFilePath = Path.Combine(Global.ProcessDirectory, $"{DateTime.Today:ddMMyyyy}.log");
                 Log.Logger = new LoggerConfiguration().WriteTo.Async(a => a.File(logFilePath))
-#if DEBUG
-                .WriteTo.Async(a => a.Debug())
-                .MinimumLevel.Verbose()
-#endif
+
                 .CreateLogger();
 
                 Log.Information("Starting {AppName} v{AppVersion} on '{OSVersion}' with args: {args}.", Global.AppName, Global.AppVersion, Global.OSVersion, args);

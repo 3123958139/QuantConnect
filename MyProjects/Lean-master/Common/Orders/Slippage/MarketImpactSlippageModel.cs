@@ -189,13 +189,13 @@ namespace QuantConnect.Orders.Slippage
         private readonly RollingWindow<decimal> _volumes = new(10);
         private readonly RollingWindow<decimal> _prices = new(252);
 
-        public double Sigma { get; internal set; }
+        public double Sigma { get; set; }
 
-        public double AverageVolume { get; internal set; }
+        public double AverageVolume { get; set; }
 
-        public double ExecutionTime { get; internal set; }
+        public double ExecutionTime { get; set; }
 
-        public double ImpactTime { get; internal set; }
+        public double ImpactTime { get; set; }
 
         public SymbolData(IAlgorithm algorithm, Security asset, double latency, double impactTime)
         {

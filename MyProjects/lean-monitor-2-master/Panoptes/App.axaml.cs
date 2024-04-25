@@ -59,12 +59,7 @@ namespace Panoptes
 
         private async Task LoadSplashScreen()
         {
-            // Wait 1.5 seconds to make sure the splash screen is visible
-#if DEBUG
-            var minDisplayTime = TimeSpan.FromMilliseconds(3_000);
-#else
             var minDisplayTime = TimeSpan.FromMilliseconds(1_500);
-#endif
 
             // Show splash screen
             var splashScreen = new Views.Windows.SplashScreenWindow();
@@ -129,8 +124,6 @@ namespace Panoptes
 
             // Sessions
             services.AddSingleton<INewSessionViewModel, NewStreamSessionViewModel>();
-            services.AddSingleton<INewSessionViewModel, NewMongoSessionViewModel>();
-            services.AddSingleton<INewSessionViewModel, NewFileSessionViewModel>();
 
             // Viewmodels
             services.AddTransient<StatusViewModel>();

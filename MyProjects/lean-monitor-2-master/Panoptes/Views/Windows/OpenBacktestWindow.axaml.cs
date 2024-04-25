@@ -48,9 +48,7 @@ namespace Panoptes.Views.Windows
 
             _loadingLabel = this.Get<Label>("_loadingLabel");
 
-#if DEBUG
-            this.AttachDevTools();
-#endif
+
         }
 
         private void InitializeComponent()

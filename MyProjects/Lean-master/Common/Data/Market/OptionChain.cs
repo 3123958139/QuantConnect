@@ -36,7 +36,7 @@ namespace QuantConnect.Data.Market
         /// </summary>
         public BaseData Underlying
         {
-            get; internal set;
+            get; set;
         }
 
         /// <summary>

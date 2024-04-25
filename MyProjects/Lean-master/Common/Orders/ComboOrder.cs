@@ -37,7 +37,7 @@ namespace QuantConnect.Orders
             {
                 return _ratio.GetOrderLegGroupQuantity(GroupOrderManager).Normalize();
             }
-            internal set
+            set
             {
                 _ratio = value.GetOrderLegRatio(GroupOrderManager);
             }
