@@ -3,6 +3,7 @@ using Panoptes.Model;
 using Serilog;
 using System;
 using System.IO;
+using System.Diagnostics;
 
 namespace Panoptes
 {
@@ -15,6 +16,8 @@ namespace Panoptes
         {
             try
             {
+                
+
                 string logFilePath = Path.Combine(Global.ProcessDirectory, $"{DateTime.Today:ddMMyyyy}.log");
                 Log.Logger = new LoggerConfiguration().WriteTo.Async(a => a.File(logFilePath))
 
@@ -23,6 +26,7 @@ namespace Panoptes
                 Log.Information("Starting {AppName} v{AppVersion} on '{OSVersion}' with args: {args}.", Global.AppName, Global.AppVersion, Global.OSVersion, args);
 
                 BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
+
             }
             catch (Exception ex)
             {

@@ -11,6 +11,7 @@ using PacketType = QuantConnect.Packets.PacketType;
 using System.IO;
 using ProtoBuf.Serializers;
 using System.Reflection.Metadata;
+using System.Diagnostics;
 
 namespace Panoptes.Model.Sessions.Stream
 {
@@ -274,42 +275,43 @@ namespace Panoptes.Model.Sessions.Stream
             {
                 switch (packetType)
                 {
-                    //case PacketType.AlgorithmStatus:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<AlgorithmStatusPacket>(payload));
-                    //    break;
-
-                    //case PacketType.LiveNode:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<LiveNodePacket>(payload));
-                    //    break;
-
-                    //case PacketType.AlgorithmNode:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<AlgorithmNodePacket>(payload));
-                    //    break;
-
-                    //case PacketType.LiveResult:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<LiveResultPacket>(payload));
-                    //    break;
-
-                    case PacketType.BacktestResult:
-                        _packetQueue.Add(JsonConvert.DeserializeObject<BacktestResultPacket>(payload));
+                    case PacketType.AlgorithmStatus:
+                        var algorithmStatus = JsonConvert.DeserializeObject<AlgorithmStatusPacket>(payload);
+                        _packetQueue.Add(JsonConvert.DeserializeObject<AlgorithmStatusPacket>(payload));
                         break;
 
-                    //case PacketType.OrderEvent:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<OrderEventPacket>(payload));
-                    //    break;
+                    case PacketType.LiveNode:
+                        _packetQueue.Add(JsonConvert.DeserializeObject<LiveNodePacket>(payload));
+                        break;
 
-                    //case PacketType.Log:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<LogPacket>(payload));
-                    //    break;
+                    case PacketType.AlgorithmNode:
+                        _packetQueue.Add(JsonConvert.DeserializeObject<AlgorithmNodePacket>(payload));
+                        break;
+
+                    case PacketType.LiveResult:
+                        _packetQueue.Add(JsonConvert.DeserializeObject<LiveResultPacket>(payload));
+                        break;
+
+                    case PacketType.BacktestResult:
+                        var backtestResult = JsonConvert.DeserializeObject<BacktestResultPacket>(payload);
+                        //_packetQueue.Add(JsonConvert.DeserializeObject<BacktestResultPacket>(payload));
+                        break;
+
+                    case PacketType.OrderEvent:
+                        _packetQueue.Add(JsonConvert.DeserializeObject<OrderEventPacket>(payload));
+                        break;
+
+                    case PacketType.Log:
+                        _packetQueue.Add(JsonConvert.DeserializeObject<LogPacket>(payload));
+                        break;
 
                     case PacketType.Debug:
-                        var data = JsonConvert.DeserializeObject<DebugPacket>(payload);
                         _packetQueue.Add(JsonConvert.DeserializeObject<DebugPacket>(payload));
                         break;
 
-                    //case PacketType.HandledError:
-                    //    _packetQueue.Add(JsonConvert.DeserializeObject<HandledErrorPacket>(payload));
-                    //    break;
+                    case PacketType.HandledError:
+                        _packetQueue.Add(JsonConvert.DeserializeObject<HandledErrorPacket>(payload));
+                        break;
 
                     default:
                         _logger.LogWarning("BaseStreamSession.HandlePacketEventsListener: Unknown packet type '{packetType}'.", packetType);

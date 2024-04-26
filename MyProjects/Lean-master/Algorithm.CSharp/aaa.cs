@@ -13,16 +13,17 @@ namespace QuantConnect.Algorithm.CSharp
         private decimal _lastPrice;
         private DateTime _resample;
         private TimeSpan _resamplePeriod;
-        private readonly DateTime _startDate = new DateTime(2020, 10, 7);
-        private readonly DateTime _endDate = new DateTime(2023, 10, 11);
+        private readonly DateTime _startDate = new DateTime(2023, 10, 7);
+        private readonly DateTime _endDate = new DateTime(2023, 11, 11);
+        private Symbol symbol;
 
         public override void Initialize()
         {
-            SetStartDate(2020, 10, 07);
-            SetEndDate(2023, 10, 11);
+            SetStartDate(2023, 10, 07);
+            SetEndDate(2023, 11, 11);
             SetCash(100000);
+            symbol = AddEquity("stk000001", Resolution.Daily).Symbol;
             AddEquity("stk000000", Resolution.Daily);
-            AddEquity("stk000001", Resolution.Daily);
             SetBenchmark("stk000000");
             var avgCross = new Chart("Strategy Equity");
             var fastMa = new Series("FastMA", SeriesType.Line, 1);
@@ -36,7 +37,11 @@ namespace QuantConnect.Algorithm.CSharp
         public override void OnData(Slice slice)
         {
             Debug(slice.Bars["stk000001"].Open.ToString("F2"));
-            
+            if (!Portfolio.Invested)
+            {
+                SetHoldings(symbol, 1);
+                Debug("Purchased Stock");
+            }
             _lastPrice = slice["stk000001"].Close;
 
             if (_fastMa == 0) _fastMa = _lastPrice;

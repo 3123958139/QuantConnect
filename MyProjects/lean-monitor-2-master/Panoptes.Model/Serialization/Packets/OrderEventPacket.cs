@@ -17,7 +17,7 @@
 // https://github.com/QuantConnect/Lean/blob/master/Common/Packets/OrderEventPacket.cs
 
 using QuantConnect.Orders;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using PacketType = QuantConnect.Packets.PacketType;
 
 namespace Panoptes.Model.Serialization.Packets
@@ -31,13 +31,13 @@ namespace Panoptes.Model.Serialization.Packets
         /// <summary>
         /// Order event object
         /// </summary>
-        [JsonPropertyName("oOrderEvent")]
+        [JsonProperty(PropertyName="oOrderEvent")]
         public OrderEvent Event;
 
         /// <summary>
         /// Algorithm id for this order event
         /// </summary>
-        [JsonPropertyName("sAlgorithmID")]
+        [JsonProperty(PropertyName="sAlgorithmID")]
         public string AlgorithmId;
 
         /// <summary>

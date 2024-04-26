@@ -99,31 +99,31 @@ namespace Panoptes.Model
 
         private static SeriesDefinition MapToSeriesDefinition(this BaseSeries sourceSeries)
         {
-            switch(sourceSeries.SeriesType)
+            switch (sourceSeries.SeriesType)
             {
                 case SeriesType.Candle:
                     return new SeriesDefinition
                     {
-                        //Color = sourceSeries.Color,
+                        //Color = ((Series)sourceSeries).Color,
                         Index = sourceSeries.Index,
                         Name = sourceSeries.Name,
-                        //ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol,
+                        //ScatterMarkerSymbol = ((Series)sourceSeries).ScatterMarkerSymbol,
                         SeriesType = sourceSeries.SeriesType,
                         Unit = sourceSeries.Unit,
                         Values = sourceSeries.Values.ConvertAll(v => ((Candlestick)v).MapToTimeStampChartPoint())
                     };
-
+                default:
+                    return new SeriesDefinition
+                    {
+                        Color = ((Series)sourceSeries).Color,
+                        Index = sourceSeries.Index,
+                        Name = sourceSeries.Name,
+                        ScatterMarkerSymbol = ((Series)sourceSeries).ScatterMarkerSymbol,
+                        SeriesType = sourceSeries.SeriesType,
+                        Unit = sourceSeries.Unit,
+                        Values = sourceSeries.Values.ConvertAll(v => ((ChartPoint)v).MapToTimeStampChartPoint())
+                    };
             }
-            return new SeriesDefinition
-            {
-                //Color = sourceSeries.Color,
-                Index = sourceSeries.Index,
-                Name = sourceSeries.Name,
-                //ScatterMarkerSymbol = sourceSeries.ScatterMarkerSymbol,
-                SeriesType = sourceSeries.SeriesType,
-                Unit = sourceSeries.Unit,
-                Values = sourceSeries.Values.ConvertAll(v => ((ChartPoint)v).MapToTimeStampChartPoint())
-            };
         }
 
         private static BaseSeries MapToSeries(this SeriesDefinition sourceSeries)

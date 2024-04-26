@@ -2,30 +2,14 @@
 using System.Drawing;
 using System.Globalization;
 using System.Text.Json;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Panoptes.Model.Serialization
 {
     // https://github.com/QuantConnect/Lean/blob/master/Common/Util/ColorJsonConverter.cs
-    public sealed class ColorJsonConverter : JsonConverter<Color>
+    public sealed class ColorJsonConverter : JsonConverter
     {
-        public override Color Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
-        {
-            switch (reader.TokenType)
-            {
-                case JsonTokenType.String:
-                    return Convert(reader.GetString());
-
-                default:
-                    throw new NotImplementedException();
-            }
-        }
-
-        public override void Write(Utf8JsonWriter writer, Color value, JsonSerializerOptions options)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Converts the input string to a .NET Color object
         /// </summary>
@@ -70,6 +54,28 @@ namespace Panoptes.Model.Serialization
             }
 
             return result;
+        }
+
+        public override bool CanConvert(Type objectType)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, Newtonsoft.Json.JsonSerializer serializer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, Newtonsoft.Json.JsonSerializer serializer)
+        {
+            switch (reader.TokenType)
+            {
+                case JsonToken.String:
+                    return Convert(reader.ReadAsString());
+
+                default:
+                    throw new NotImplementedException();
+            }
         }
     }
 }

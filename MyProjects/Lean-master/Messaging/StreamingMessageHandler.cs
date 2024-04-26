@@ -25,6 +25,7 @@ using QuantConnect.Packets;
 using NetMQ;
 using NetMQ.Sockets;
 using QuantConnect.Orders.Serialization;
+using CloneExtensions;
 
 namespace QuantConnect.Messaging
 {
@@ -95,6 +96,11 @@ namespace QuantConnect.Messaging
         /// <param name="packet">Packet to transmit</param>
         public void Transmit(Packet packet)
         {
+            if (packet.Type == PacketType.BacktestResult)
+            {
+                var y = JsonConvert.SerializeObject(packet, _orderEventJsonConverter);
+                var x = packet;
+            }
             var payload = JsonConvert.SerializeObject(packet, _orderEventJsonConverter);
 
             var message = new NetMQMessage();

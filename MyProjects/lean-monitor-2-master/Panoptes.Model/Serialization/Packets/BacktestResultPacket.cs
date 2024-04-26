@@ -110,7 +110,7 @@ namespace Panoptes.Model.Serialization.Packets
         /// Result data object for this backtest
         /// </summary>
         [JsonProperty(PropertyName ="oResults")]
-        public BacktestResult Results = new BacktestResult();
+        public BacktestResult Results = new ();
 
         /// <summary>
         /// Processing time of the algorithm (from moment the algorithm arrived on the algorithm node)
@@ -129,7 +129,9 @@ namespace Panoptes.Model.Serialization.Packets
         /// </summary>
         public BacktestResultPacket()
             : base(PacketType.BacktestResult)
-        { }
+        {
+            PeriodStart = PeriodFinish = DateRequested = DateFinished = DateTime.UtcNow;
+        }
 
         /// <summary>
         /// Compose the packet from a JSON string:
@@ -137,8 +139,6 @@ namespace Panoptes.Model.Serialization.Packets
         public BacktestResultPacket(string json)
             : base(PacketType.BacktestResult)
         {
-            throw new NotImplementedException();
-            /*
             try
             {
                 var packet = JsonConvert.DeserializeObject<BacktestResultPacket>(json, new JsonSerializerSettings
@@ -165,9 +165,9 @@ namespace Panoptes.Model.Serialization.Packets
             }
             catch (Exception err)
             {
-                Log.Trace($"BacktestResultPacket(): Error converting json: {err}");
+                Trace.TraceError(err.ToString());
+                //Log.Trace($"BacktestResultPacket(): Error converting json: {err}");
             }
-            */
         }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace Panoptes.Model.Serialization.Packets
         /// <param name="startDate">The algorithms backtest start date</param>
         /// <param name="progress">Progress of the packet. For the packet we assume progess of 100%.</param>
         public BacktestResultPacket(BacktestNodePacket job, BacktestResult results, DateTime endDate, DateTime startDate, decimal progress = 1m)
-            : base(PacketType.BacktestResult)
+            : this()
         {
             try
             {
@@ -212,11 +212,20 @@ namespace Panoptes.Model.Serialization.Packets
         /// <returns>An empty result packet</returns>
         public static BacktestResultPacket CreateEmpty(BacktestNodePacket job)
         {
-            return new BacktestResultPacket(job, new BacktestResult(new BacktestResultParameters(
-                new Dictionary<string, Chart>(), new Dictionary<int, Order>(), new Dictionary<DateTime, decimal>(),
-                new Dictionary<string, string>(), new Dictionary<string, string>(), new Dictionary<string, AlgorithmPerformance>(),
-                new List<OrderEvent>(), new AlgorithmPerformance()
-            )), DateTime.UtcNow, DateTime.UtcNow);
+            return new BacktestResultPacket(job,
+               new BacktestResult(
+               new BacktestResultParameters(
+               new Dictionary<string, Chart>(),
+               new Dictionary<int, Order>(),
+               new Dictionary<DateTime, decimal>(),
+               new Dictionary<string, string>(),
+               new SortedDictionary<string, string>(),
+               new Dictionary<string, AlgorithmPerformance>(),
+               new List<OrderEvent>(),
+               new AlgorithmPerformance(),
+               new AlgorithmConfiguration(),
+               new Dictionary<string, string>()
+           )), DateTime.UtcNow, DateTime.UtcNow);
         }
     } // End Queue Packet:
 
@@ -249,7 +258,8 @@ namespace Panoptes.Model.Serialization.Packets
         /// </summary>
         public BacktestResult(BacktestResultParameters parameters)
         {
-            throw new NotImplementedException();
+            RollingWindow = parameters.RollingWindow;
+            TotalPerformance = parameters.TotalPerformance;
 
             /*
             Charts = parameters.Charts;

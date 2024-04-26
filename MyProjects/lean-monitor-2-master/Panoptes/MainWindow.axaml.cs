@@ -10,6 +10,7 @@ using Panoptes.Model.Messages;
 using Panoptes.ViewModels;
 using Panoptes.Views.NewSession;
 using Panoptes.Views.Windows;
+using QuantConnect.Orders.Fills;
 using Serilog;
 using System;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace Panoptes
     public partial class MainWindow : Window
     {
         private readonly IMessenger _messenger;
+        private Process process;
 
         public MainWindowViewModel ViewModel => (MainWindowViewModel)DataContext;
 
@@ -41,6 +43,26 @@ namespace Panoptes
 
         private void InitializeComponent()
         {
+            Task.Run(() =>
+            {
+                string directoryPath = @"E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\Lean-master\Launcher\bin\Debug\"; // 替换为你的目录路径
+                string exeFileName = "QuantConnect.Lean.Launcher.exe"; // 替换为你的应用程序名称
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    FileName = exeFileName,
+                    Arguments = "", // 如果需要参数，可以在这里添加
+                    WorkingDirectory = directoryPath,
+                    UseShellExecute = true
+                };
+
+                process = new Process
+                {
+                    StartInfo = startInfo
+                };
+
+                process.Start();
+            });
+           
             AvaloniaXamlLoader.Load(this);
         }
 
@@ -50,6 +72,8 @@ namespace Panoptes
             {
                 ViewModel?.ShutdownSession();
                 ViewModel?.Terminate();
+
+                process.Kill();
 
                 if (App.Current.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
                 {

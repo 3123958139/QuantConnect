@@ -17,7 +17,7 @@
 // https://github.com/QuantConnect/Lean/blob/master/Common/Packets/AlgorithmStatusPacket.cs
 
 using QuantConnect;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using PacketType = QuantConnect.Packets.PacketType;
 
 namespace Panoptes.Model.Serialization.Packets
@@ -30,43 +30,43 @@ namespace Panoptes.Model.Serialization.Packets
         /// <summary>
         /// Current algorithm status
         /// </summary>
-        [JsonPropertyName("eStatus")]
+        [JsonProperty(PropertyName="eStatus")]
         public AlgorithmStatus Status;
 
         /// <summary>
         /// Chart we're subscribed to for live trading.
         /// </summary>
-        [JsonPropertyName("sChartSubscription")]
+        [JsonProperty(PropertyName="sChartSubscription")]
         public string ChartSubscription;
 
         /// <summary>
         /// Optional message or reason for state change.
         /// </summary>
-        [JsonPropertyName("sMessage")]
+        [JsonProperty(PropertyName="sMessage")]
         public string Message;
 
         /// <summary>
         /// Algorithm Id associated with this status packet
         /// </summary>
-        [JsonPropertyName("sAlgorithmID")]
+        [JsonProperty(PropertyName="sAlgorithmID")]
         public string AlgorithmId;
 
         /// <summary>
         /// OptimizationId for this result packet if any
         /// </summary>
-        [JsonPropertyName("sOptimizationID")]
+        [JsonProperty(PropertyName="sOptimizationID")]
         public string OptimizationId;
 
         /// <summary>
         /// Project Id associated with this status packet
         /// </summary>
-        [JsonPropertyName("iProjectID")]
+        [JsonProperty(PropertyName="iProjectID")]
         public int ProjectId;
 
         /// <summary>
         /// The current state of the channel
         /// </summary>
-        [JsonPropertyName("sChannelStatus")]
+        [JsonProperty(PropertyName="sChannelStatus")]
         public string ChannelStatus;
 
         /// <summary>
