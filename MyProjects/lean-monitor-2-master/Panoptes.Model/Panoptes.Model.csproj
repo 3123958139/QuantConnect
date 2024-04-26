@@ -26,6 +26,18 @@
     <Reference Include="QuantConnect.Common">
       <HintPath>..\..\Lean-master\Common\bin\Debug\QuantConnect.Common.dll</HintPath>
     </Reference>
+    <Reference Include="QuantConnect.Compression">
+      <HintPath>..\..\Lean-master\Common\bin\Debug\QuantConnect.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantConnect.Configuration">
+      <HintPath>..\..\Lean-master\Common\bin\Debug\QuantConnect.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantConnect.Logging">
+      <HintPath>..\..\Lean-master\Common\bin\Debug\QuantConnect.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\Lean-master\Launcher\bin\Debug\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,7 @@ using System.IO;
 using ProtoBuf.Serializers;
 using System.Reflection.Metadata;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace Panoptes.Model.Sessions.Stream
 {
@@ -293,8 +294,8 @@ namespace Panoptes.Model.Sessions.Stream
                         break;
 
                     case PacketType.BacktestResult:
-                        var backtestResult = JsonConvert.DeserializeObject<BacktestResultPacket>(payload);
-                        //_packetQueue.Add(JsonConvert.DeserializeObject<BacktestResultPacket>(payload));
+                        JsonConverter[] jsonConverters = new JsonConverter[] { new OrderJsonConverter(), new OrderEventJsonConverter() };
+                        _packetQueue.Add(JsonConvert.DeserializeObject<BacktestResultPacket>(payload, jsonConverters));
                         break;
 
                     case PacketType.OrderEvent:

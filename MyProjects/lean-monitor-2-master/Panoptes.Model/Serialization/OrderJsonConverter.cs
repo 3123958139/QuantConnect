@@ -1,19 +1,83 @@
-﻿using QuantConnect;
-using QuantConnect.Brokerages;
-using QuantConnect.Orders;
-using QuantConnect.Orders.Serialization;
-using QuantConnect.Orders.TimeInForces;
-using QuantConnect.Securities;
+﻿/*
+ * QUANTCONNECT.COM - Democratizing Finance, Empowering Individuals.
+ * Lean Algorithmic Trading Engine v2.0. Copyright 2014 QuantConnect Corporation.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
 using System;
 using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using QuantConnect.Orders;
+using QuantConnect.Brokerages;
+using QuantConnect.Securities;
+using QuantConnect;
+
 
 namespace Panoptes.Model.Serialization
 {
-    // https://github.com/QuantConnect/Lean/blob/master/Common/Orders/OrderJsonConverter.cs
-    public sealed class OrderJsonConverter : JsonConverter
+    /// <summary>
+    /// Provides an implementation of <see cref="JsonConverter"/> that can deserialize Orders
+    /// </summary>
+    public class OrderJsonConverter : JsonConverter
     {
+        /// <summary>
+        /// Gets a value indicating whether this <see cref="T:Newtonsoft.Json.JsonConverter"/> can write JSON.
+        /// </summary>
+        /// <value>
+        /// <c>true</c> if this <see cref="T:Newtonsoft.Json.JsonConverter"/> can write JSON; otherwise, <c>false</c>.
+        /// </value>
+        public override bool CanWrite
+        {
+            get { return false; }
+        }
+
+        /// <summary>
+        /// Determines whether this instance can convert the specified object type.
+        /// </summary>
+        /// <param name="objectType">Type of the object.</param>
+        /// <returns>
+        /// <c>true</c> if this instance can convert the specified object type; otherwise, <c>false</c>.
+        /// </returns>
+        public override bool CanConvert(Type objectType)
+        {
+            return typeof(Order).IsAssignableFrom(objectType);
+        }
+
+        /// <summary>
+        /// Writes the JSON representation of the object.
+        /// </summary>
+        /// <param name="writer">The <see cref="T:Newtonsoft.Json.JsonWriter"/> to write to.</param><param name="value">The value.</param><param name="serializer">The calling serializer.</param>
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            throw new NotImplementedException("The OrderJsonConverter does not implement a WriteJson method;.");
+        }
+
+        /// <summary>
+        /// Reads the JSON representation of the object.
+        /// </summary>
+        /// <param name="reader">The <see cref="T:Newtonsoft.Json.JsonReader"/> to read from.</param><param name="objectType">Type of the object.</param><param name="existingValue">The existing value of object being read.</param><param name="serializer">The calling serializer.</param>
+        /// <returns>
+        /// The object value.
+        /// </returns>
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            var jObject = JObject.Load(reader);
+
+            var order = CreateOrderFromJObject(jObject);
+
+            return order;
+        }
+
         /// <summary>
         /// Create an order from a simple JObject
         /// </summary>
@@ -123,7 +187,6 @@ namespace Panoptes.Model.Serialization
             order.Properties.TimeInForce = (timeInForce != null)
                 ? CreateTimeInForce(timeInForce, jObject)
                 : TimeInForce.GoodTilCanceled;
-
             if (jObject.SelectTokens("Symbol.ID").Any())
             {
                 var sid = SecurityIdentifier.Parse(jObject.SelectTokens("Symbol.ID").Single().Value<string>());
@@ -165,7 +228,6 @@ namespace Panoptes.Model.Serialization
                     order.Symbol = Symbol.Create(tickerstring, securityType, market);
                 }
             }
-
             return order;
         }
 
@@ -174,7 +236,8 @@ namespace Panoptes.Model.Serialization
         /// </summary>
         private static Order CreateOrder(OrderType orderType, JObject jObject)
         {
-            Order order;
+            //public MarketOrder(Symbol symbol, decimal quantity, DateTime time, decimal price, string tag = "", IOrderProperties properties = null)
+            Order order = new MarketOrder(null, 0, DateTime.Now, 0);
             switch (orderType)
             {
                 case OrderType.Market:
@@ -246,11 +309,41 @@ namespace Panoptes.Model.Serialization
                     break;
 
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    break;
             }
             return order;
         }
 
+        /// <summary>
+        /// Creates a Time In Force of the correct type
+        /// </summary>
+        private static TimeInForce CreateTimeInForce(JToken timeInForce, JObject jObject)
+        {
+            // for backward-compatibility support deserialization of old JSON format
+            if (timeInForce is JValue)
+            {
+                var value = timeInForce.Value<int>();
+
+                switch (value)
+                {
+                    case 0:
+                        return TimeInForce.GoodTilCanceled;
+
+                    case 1:
+                        return TimeInForce.Day;
+
+                    case 2:
+                        var expiry = jObject["DurationValue"].Value<DateTime>();
+                        return TimeInForce.GoodTilDate(expiry);
+
+                    default:
+                        throw new Exception($"Unknown time in force value: {value}");
+                }
+            }
+
+            // convert with TimeInForceJsonConverter
+            return timeInForce.ToObject<TimeInForce>();
+        }
 
         /// <summary>
         /// Deserializes the GroupOrderManager from the JSON object
@@ -278,59 +371,6 @@ namespace Panoptes.Model.Serialization
             }
 
             return result;
-        }
-
-        /// <summary>
-        /// Creates a Time In Force of the correct type
-        /// </summary>
-        private static TimeInForce CreateTimeInForce(JToken timeInForce, JObject jObject)
-        {
-            return TimeInForce.GoodTilCanceled;
-            /*
-            // for backward-compatibility support deserialization of old JSON format
-            if (timeInForce is JValue)
-            {
-                var value = timeInForce.Value<int>();
-
-                switch (value)
-                {
-                    case 0:
-                        return TimeInForce.GoodTilCanceled;
-
-                    case 1:
-                        return TimeInForce.Day;
-
-                    case 2:
-                        var expiry = jObject.RootElement.GetProperty("DurationValue").GetDateTime();
-                        return TimeInForce.GoodTilDate(expiry);
-
-                    default:
-                        throw new Exception($"Unknown time in force value: {value}");
-                }
-            }
-
-            // convert with TimeInForceJsonConverter
-            return timeInForce.ToObject<TimeInForce>();
-            */
-        }
-
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            throw new NotImplementedException("The OrderJsonConverter does not implement a WriteJson method;.");
-        }
-
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            var jObject = JObject.Load(reader);
-
-            var order = CreateOrderFromJObject(jObject);
-
-            return order;
-        }
-
-        public override bool CanConvert(Type objectType)
-        {
-            return typeof(Order).IsAssignableFrom(objectType);
         }
     }
 }

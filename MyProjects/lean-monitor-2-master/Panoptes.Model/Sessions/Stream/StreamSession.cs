@@ -32,20 +32,11 @@ namespace Panoptes.Model.Sessions.Stream
                         {
                             continue;
                         }
-
-                        //try
-                        //{
-                            // There should only be 1 part messages
-                            if (message.FrameCount != 1) continue;
-                            var data = message[0];
-                            var payload = data.ConvertToString(Encoding.UTF8);
-                            var packet = JsonConvert.DeserializeObject<Packet>(payload);
-                            HandlePacketEventsListener(payload, packet.Type);
-                        //}
-                        //catch (Exception ex)
-                        //{
-                        //    Trace.TraceError(ex.ToString());                            
-                        //}
+                        if (message.FrameCount != 1) continue;
+                        var data = message[0];
+                        var payload = data.ConvertToString(Encoding.UTF8);
+                        var packet = JsonConvert.DeserializeObject<Packet>(payload);
+                        HandlePacketEventsListener(payload, packet.Type);
                     }
                 }
             }

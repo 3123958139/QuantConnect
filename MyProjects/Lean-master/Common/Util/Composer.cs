@@ -42,7 +42,7 @@ namespace QuantConnect.Util
             () =>
             {
                 PluginDirectory = Config.Get("plugin-directory");
-                return new Composer();
+                return new Composer(); 
             });
 
         /// <summary>

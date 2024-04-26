@@ -26,6 +26,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using BacktestResultParameters = QuantConnect.Packets.BacktestResultParameters;
 using PacketType = QuantConnect.Packets.PacketType;
+using QuantConnect.Securities;
 
 namespace Panoptes.Model.Serialization.Packets
 {
@@ -130,7 +131,6 @@ namespace Panoptes.Model.Serialization.Packets
         public BacktestResultPacket()
             : base(PacketType.BacktestResult)
         {
-            PeriodStart = PeriodFinish = DateRequested = DateFinished = DateTime.UtcNow;
         }
 
         /// <summary>
@@ -260,18 +260,14 @@ namespace Panoptes.Model.Serialization.Packets
         {
             RollingWindow = parameters.RollingWindow;
             TotalPerformance = parameters.TotalPerformance;
-
-            /*
-            Charts = parameters.Charts;
-            Orders = parameters.Orders;
-            ProfitLoss = parameters.ProfitLoss;
-            Statistics = parameters.Statistics;
-            RuntimeStatistics = parameters.RuntimeStatistics;
-            RollingWindow = parameters.RollingWindow;
-            OrderEvents = parameters.OrderEvents;
-            TotalPerformance = parameters.TotalPerformance;
-            AlphaRuntimeStatistics = parameters.AlphaRuntimeStatistics;
-            */
+            //Charts = parameters.Charts;
+            //Orders = parameters.Orders;
+            //ProfitLoss = parameters.ProfitLoss;
+            //Statistics = parameters.Statistics;
+            //RuntimeStatistics = parameters.RuntimeStatistics;
+            //RollingWindow = parameters.RollingWindow;
+            //OrderEvents = parameters.OrderEvents;
+            //TotalPerformance = parameters.TotalPerformance;
         }
     }
 }
