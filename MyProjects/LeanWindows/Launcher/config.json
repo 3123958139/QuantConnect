@@ -9,11 +9,10 @@
   // algorithm class selector
   "algorithm-type-name": "aaa",
   // Algorithm language selector - options CSharp, Python
-  "algorithm-language": "CSharp",
+  "algorithm-language": "Python",
   //Physical DLL location
-  "algorithm-location": "QuantConnect.Algorithm.CSharp.dll",
-  "plugin-directory": null,
-  //"algorithm-location": "../../../Algorithm.Python/BasicTemplateFrameworkAlgorithm.py",
+  // "algorithm-location": "QuantConnect.Algorithm.CSharp.dll",
+  "algorithm-location": "../../../Algorithm.Python/aaa.py",
   //Research notebook
   //"composer-dll-directory": ".",
   // engine
@@ -23,6 +22,7 @@
   "debugging-method": "LocalCmdline",
   // location of a python virtual env to use libraries from
   //"python-venv": "/venv",
+  "plugin-directory": null,
   // handlers
   "log-handler": "QuantConnect.Logging.CompositeLogHandler",
   // "messaging-handler": "QuantConnect.Messaging.Messaging",
