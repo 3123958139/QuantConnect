@@ -1,0 +1,9 @@
+{
+    "files.eol": "\n",
+    "python.analysis.extraPaths": [
+        "/Lean/Algorithm.Python",
+        "/opt/miniconda3/lib/python3.8/site-packages"
+    ],
+    "dotnet.preferCSharpExtension": true,
+    "dotnet.defaultSolution": "disable"
+}

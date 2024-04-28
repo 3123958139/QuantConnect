@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ApplicationIcon>Resources\icon\logo_plain.ico</ApplicationIcon>
+		<Version>0.0.0.1-beta2</Version>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+		<NeutralLanguage>en</NeutralLanguage>
+		<DebugType>embedded</DebugType>
+		<Company>Panoptes</Company>
+		<Product>Panoptes</Product>
+		<PackageProjectUrl>https://github.com/BobLd/lean-monitor-2</PackageProjectUrl>
+		<Description>Windows/Linux/MacOS Desktop App to browse QuantConnect Lean engine's backtest and monitor live performances.</Description>
+		<PackageIcon>logo_plain.png</PackageIcon>
+		<RepositoryUrl>https://github.com/BobLd/lean-monitor-2</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<Authors>Panoptes</Authors>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Resources\icon\logo_plain.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<TrimmableAssembly Include="Avalonia.Themes.Fluent" />
+		<TrimmableAssembly Include="QLNet" />
+		<TrimmableAssembly Include="MathNet.Numerics" />
+		<TrimmableAssembly Include="Python.Runtime" />
+		<TrimmableAssembly Include="McMaster.Extensions.CommandLineUtils" />
+		<TrimmableAssembly Include="System.Security.Cryptography.Pkcs" />
+	</ItemGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="Resources\icon\logo_plain.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="0.10.15" />
+		<PackageReference Include="Avalonia.Controls.DataGrid" Version="0.10.15" />
+		<PackageReference Include="Avalonia.Desktop" Version="0.10.15" />
+		<PackageReference Include="Avalonia.Diagnostics" Version="0.10.15" Condition=" '$(Configuration)' == 'Debug' " />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+		<PackageReference Include="OxyPlot.Avalonia" Version="2.1.0-Preview1" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+		<PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+		<PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" Condition=" '$(Configuration)' == 'Debug' " />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Panoptes.Model\Panoptes.Model.csproj" />
+		<ProjectReference Include="..\Panoptes.ViewModels\Panoptes.ViewModels.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Resources\sounds\alerts\" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\logo\logo_plain.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="Newtonsoft.Json">
+	    <HintPath>..\..\Launcher\bin\Debug\Newtonsoft.Json.dll</HintPath>
+	  </Reference>
+	  <Reference Include="QuantConnect.Common">
+	    <HintPath>..\..\Common\bin\Debug\QuantConnect.Common.dll</HintPath>
+	  </Reference>
+	  <Reference Include="QuantConnect.Compression">
+	    <HintPath>..\..\Common\bin\Debug\QuantConnect.Compression.dll</HintPath>
+	  </Reference>
+	  <Reference Include="QuantConnect.Configuration">
+	    <HintPath>..\..\Common\bin\Debug\QuantConnect.Configuration.dll</HintPath>
+	  </Reference>
+	  <Reference Include="QuantConnect.Logging">
+	    <HintPath>..\..\Common\bin\Debug\QuantConnect.Logging.dll</HintPath>
+	  </Reference>
+	  <Reference Include="System.ComponentModel.Composition">
+	    <HintPath>..\..\Launcher\bin\Debug\System.ComponentModel.Composition.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+</Project>

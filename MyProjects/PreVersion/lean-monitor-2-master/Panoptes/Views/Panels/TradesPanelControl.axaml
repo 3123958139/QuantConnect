@@ -1,0 +1,39 @@
+<UserControl x:Class="Panoptes.Views.Panels.TradesPanelControl"
+			 xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:local="clr-namespace:Panoptes.Views.Panels"
+             xmlns:panels="clr-namespace:Panoptes.ViewModels.Panels;assembly=Panoptes.ViewModels"
+			 IsVisible="{Binding IsVisible}"
+             mc:Ignorable="d"
+			 d:DesignWidth="800" d:DesignHeight="450">
+	
+	<UserControl.Styles>
+		<Style Selector="CalendarDatePicker">
+			<Setter Property="Watermark" Value="dd/mm/yyyy"/>
+			<Setter Property="MinWidth" Value="110"/>
+			<Setter Property="FontSize" Value="12"/>
+			<Setter Property="Padding" Value="5,1,5,0"/>
+		</Style>
+	</UserControl.Styles>
+
+	<TabControl Padding="0">
+		<TabItem Name="_todayTab" Header="Today">
+			<local:TradesDataGridControl Name="_todayTradesDataGrid" Items="{Binding OrdersToday, Mode=OneWay}" Margin="0,2,0,0"/>
+		</TabItem>
+		<TabItem Name="_historyTab" Header="History">
+			<Grid Margin="0,2,0,0" RowDefinitions="*,25">
+				<local:TradesDataGridControl Name="_historyTradesDataGrid" Grid.Row="0" Items="{Binding OrdersHistory, Mode=OneWay}"/>
+				<StackPanel Grid.Row="1" Orientation="Horizontal">
+					<Label Content="From "/>
+					<CalendarDatePicker x:Name="_calendarDatePickerFrom" SelectedDate="{Binding FromDate, Mode=TwoWay}"
+										DisplayDateEnd="{Binding ToDate, Mode=OneWay}"/>
+					<Label Content=" to "/>
+					<CalendarDatePicker x:Name="_calendarDatePickerTo" SelectedDate="{Binding ToDate, Mode=TwoWay}"
+										DisplayDateStart="{Binding FromDate, Mode=OneWay}"/>
+				</StackPanel>
+			</Grid>
+		</TabItem>
+	</TabControl>
+</UserControl>

@@ -1,0 +1,28 @@
+<UserControl x:Class="Panoptes.Views.NewSession.NewStreamSessionControl"
+			 xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450">
+
+	<UserControl.Styles>
+		<Style Selector="TextBox">
+			<Setter Property="Margin" Value="0,0,0,4"/>
+		</Style>
+	</UserControl.Styles>
+	
+	<Grid Margin="5" ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+		<Label Grid.Row="0" Content="Host"/>
+		<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Host}"
+				 IsEnabled="{Binding OpenCommandAsync.IsRunning, Converter={StaticResource InverseBooleanConverter}}"/>
+
+		<Label Grid.Row="1" Grid.Column="0" Content="Port"/>
+		<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Port}"
+				 IsEnabled="{Binding OpenCommandAsync.IsRunning, Converter={StaticResource InverseBooleanConverter}}"/>
+
+		<StackPanel Orientation="Vertical" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+			<TextBlock TextWrapping="Wrap" Text="Configure LEAN to use the 'StreamingMessageHandler' implementation. You can start this program to connect automatically to localhost by passing the port as a commandline parameter."/>
+			<TextBlock Foreground="{StaticResource HighlightBrush}" TextWrapping="Wrap" Text="NOT RECOMMENDED - Will block the Lean engine and this app will become the bottleneck."/>
+		</StackPanel>
+	</Grid>
+</UserControl>

@@ -1,0 +1,38 @@
+<UserControl x:Class="Panoptes.Views.Panels.LogPanelControl"
+			 xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:panels="clr-namespace:Panoptes.Views.Panels"
+			 IsVisible="{Binding IsVisible}"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450">
+
+	<UserControl.Styles>
+		<Style Selector="DrawingPresenter.logoType">
+			<Setter Property="Drawing" Value="{Binding Path=EntryType, Mode=OneWay, Converter={StaticResource LogPanelLogoTypeConverter}}"/>
+		</Style>
+	</UserControl.Styles>
+
+	<DataGrid IsReadOnly="True" AutoGenerateColumns="False" Items="{Binding LogEntries}" CanUserResizeColumns="True">
+		<DataGrid.Columns>
+			<DataGridTemplateColumn Header="Type" SortMemberPath="EntryType" MaxWidth="100">
+				<DataGridTemplateColumn.CellTemplate>
+					<DataTemplate>
+						<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+							<DrawingPresenter Margin="1" Classes="logoType" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+							<Label Content="{Binding EntryType, Mode=OneWay}" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+						</StackPanel>
+					</DataTemplate>
+				</DataGridTemplateColumn.CellTemplate>
+			</DataGridTemplateColumn>
+			<DataGridTextColumn Header="Date" Binding="{Binding DateTime, Mode=OneWay}" Width="140"/>
+			<DataGridTemplateColumn Header="Message" SortMemberPath="Message" MaxWidth="600">
+				<DataGridTemplateColumn.CellTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Message, Mode=OneWay}" TextWrapping="WrapWithOverflow" TextTrimming="CharacterEllipsis"/>
+					</DataTemplate>
+				</DataGridTemplateColumn.CellTemplate>
+			</DataGridTemplateColumn>
+		</DataGrid.Columns>
+	</DataGrid>
+</UserControl>
