@@ -23,8 +23,7 @@
           "QuantConnect.Logging": "1.0.0",
           "QuantConnect.pythonnet": "2.0.32",
           "RestSharp": "106.12.0",
-          "fasterflect": "3.0.0",
-          "QuantConnect.Common.Reference": "2.5.0.0"
+          "fasterflect": "3.0.0"
         },
         "runtime": {
           "QuantConnect.Lean.Engine.dll": {}
@@ -497,14 +496,6 @@
         "runtime": {
           "QuantConnect.Logging.dll": {}
         }
-      },
-      "QuantConnect.Common.Reference/2.5.0.0": {
-        "runtime": {
-          "QuantConnect.Common.dll": {
-            "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
-          }
-        }
       }
     }
   },
@@ -811,11 +802,6 @@
     },
     "QuantConnect.Logging/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "QuantConnect.Common.Reference/2.5.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

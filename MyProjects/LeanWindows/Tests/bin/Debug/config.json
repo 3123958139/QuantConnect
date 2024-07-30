@@ -7,12 +7,12 @@
   // to add more!
   "environment": "backtesting-desktop", // "live-paper", "backtesting", "live-interactive", "live-interactive-iqfeed"
   // algorithm class selector
-  "algorithm-type-name": "aaa",
+  "algorithm-type-name": "main",
   // Algorithm language selector - options CSharp, Python
   "algorithm-language": "Python",
   //Physical DLL location
   // "algorithm-location": "QuantConnect.Algorithm.CSharp.dll",
-  "algorithm-location": "../../../Algorithm.Python/aaa.py",
+  "algorithm-location": "../../../Algorithm.Python/TD3/main.py",
   //Research notebook
   //"composer-dll-directory": ".",
   // engine

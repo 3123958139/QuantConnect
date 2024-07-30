@@ -24,8 +24,7 @@
           "QuantConnect.Optimizer.Launcher": "1.0.0",
           "QuantConnect.Queues": "1.0.0",
           "QuantConnect.Research": "1.0.0",
-          "QuantConnect.ToolBox": "1.0.0",
-          "QuantConnect.Common.Reference": "2.5.0.0"
+          "QuantConnect.ToolBox": "1.0.0"
         },
         "runtime": {
           "QuantConnect.Lean.Launcher.dll": {}
@@ -1986,14 +1985,6 @@
         "runtime": {
           "QuantConnect.ToolBox.dll": {}
         }
-      },
-      "QuantConnect.Common.Reference/2.5.0.0": {
-        "runtime": {
-          "QuantConnect.Common.dll": {
-            "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
-          }
-        }
       }
     }
   },
@@ -3119,11 +3110,6 @@
     },
     "QuantConnect.ToolBox/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "QuantConnect.Common.Reference/2.5.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

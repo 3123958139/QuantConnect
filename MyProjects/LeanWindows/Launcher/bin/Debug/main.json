@@ -1,0 +1,39 @@
+{
+  "rollingWindow": {},
+  "totalPerformance": null,
+  "charts": {
+    "Strategy Equity": {
+      "name": "Strategy Equity",
+      "chartType": 0,
+      "series": {
+        "Equity": {"Name":"Equity","Unit":"$","Index":0,"SeriesType":2,"Values":[]},
+        "Return": {"Name":"Return","Unit":"%","Index":1,"SeriesType":3,"Values":[],"Color":"","ScatterMarkerSymbol":"none"}
+      }
+    }
+  },
+  "orders": {},
+  "profitLoss": {},
+  "statistics": {},
+  "runtimeStatistics": {
+    "Equity": "$100,000.00",
+    "Fees": "-$0.00",
+    "Holdings": "$0.00",
+    "Net Profit": "$0.00",
+    "Probabilistic Sharpe Ratio": "0%",
+    "Return": "0.00 %",
+    "Unrealized": "$0.00",
+    "Volume": "$0.00"
+  },
+  "state": {
+    "StartTime": "2024-07-30 09:22:49",
+    "EndTime": "",
+    "RuntimeError": "",
+    "StackTrace": "",
+    "LogCount": "1",
+    "OrderCount": "0",
+    "InsightCount": "0",
+    "Name": "local",
+    "Hostname": "docker-desktop",
+    "Status": "Running"
+  }
+}

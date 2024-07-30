@@ -49,7 +49,7 @@ class aaa_FamaFrenchFiveFactorsAlgorithm(QCAlgorithm):
 
         selected = sorted([x for x in coarse if x.HasFundamentalData and x.Price > 5],
                           key=lambda x: x.DollarVolume, reverse=True)
-
+        self.debug([x.Symbol for x in selected[:self.num_coarse]])
         return [x.Symbol for x in selected[:self.num_coarse]]
 
 

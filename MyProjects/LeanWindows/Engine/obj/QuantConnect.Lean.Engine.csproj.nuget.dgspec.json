@@ -1,44 +1,43 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\QuantConnect.Lean.Engine.csproj": {}
+    "/Lean/Engine/QuantConnect.Lean.Engine.csproj": {}
   },
   "projects": {
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\QuantConnect.Algorithm.CSharp.csproj": {
+    "/Lean/Algorithm.CSharp/QuantConnect.Algorithm.CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\QuantConnect.Algorithm.CSharp.csproj",
+        "projectUniqueName": "/Lean/Algorithm.CSharp/QuantConnect.Algorithm.CSharp.csproj",
         "projectName": "QuantConnect.Algorithm.CSharp",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\QuantConnect.Algorithm.CSharp.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\obj\\",
+        "projectPath": "/Lean/Algorithm.CSharp/QuantConnect.Algorithm.CSharp.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Algorithm.CSharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.Framework\\QuantConnect.Algorithm.Framework.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.Framework\\QuantConnect.Algorithm.Framework.csproj"
+              "/Lean/Algorithm.Framework/QuantConnect.Algorithm.Framework.csproj": {
+                "projectPath": "/Lean/Algorithm.Framework/QuantConnect.Algorithm.Framework.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj"
+              "/Lean/Algorithm/QuantConnect.Algorithm.csproj": {
+                "projectPath": "/Lean/Algorithm/QuantConnect.Algorithm.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj"
+              "/Lean/Indicators/QuantConnect.Indicators.csproj": {
+                "projectPath": "/Lean/Indicators/QuantConnect.Indicators.csproj"
               }
             }
           }
@@ -47,11 +46,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -110,61 +104,46 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.Framework\\QuantConnect.Algorithm.Framework.csproj": {
+    "/Lean/Algorithm.Framework/QuantConnect.Algorithm.Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.Framework\\QuantConnect.Algorithm.Framework.csproj",
+        "projectUniqueName": "/Lean/Algorithm.Framework/QuantConnect.Algorithm.Framework.csproj",
         "projectName": "QuantConnect.Algorithm.Framework",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.Framework\\QuantConnect.Algorithm.Framework.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.Framework\\obj\\",
+        "projectPath": "/Lean/Algorithm.Framework/QuantConnect.Algorithm.Framework.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Algorithm.Framework/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj"
+              "/Lean/Algorithm/QuantConnect.Algorithm.csproj": {
+                "projectPath": "/Lean/Algorithm/QuantConnect.Algorithm.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj"
+              "/Lean/Indicators/QuantConnect.Indicators.csproj": {
+                "projectPath": "/Lean/Indicators/QuantConnect.Indicators.csproj"
               }
             }
           }
@@ -173,11 +152,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -220,161 +194,49 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\QuantConnect.AlgorithmFactory.csproj": {
+    "/Lean/Algorithm/QuantConnect.Algorithm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\QuantConnect.AlgorithmFactory.csproj",
-        "projectName": "QuantConnect.AlgorithmFactory",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\QuantConnect.AlgorithmFactory.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj"
-              },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
-              },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj"
-              },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "NodaTime": {
-              "target": "Package",
-              "version": "[3.0.5, )"
-            },
-            "QuantConnect.pythonnet": {
-              "target": "Package",
-              "version": "[2.0.32, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj",
+        "projectUniqueName": "/Lean/Algorithm/QuantConnect.Algorithm.csproj",
         "projectName": "QuantConnect.Algorithm",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\obj\\",
+        "projectPath": "/Lean/Algorithm/QuantConnect.Algorithm.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Algorithm/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj"
+              "/Lean/Configuration/QuantConnect.Configuration.csproj": {
+                "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj"
+              "/Lean/Indicators/QuantConnect.Indicators.csproj": {
+                "projectPath": "/Lean/Indicators/QuantConnect.Indicators.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -383,11 +245,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -422,61 +279,49 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj": {
+    "/Lean/AlgorithmFactory/QuantConnect.AlgorithmFactory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj",
-        "projectName": "QuantConnect.Api",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\obj\\",
+        "projectUniqueName": "/Lean/AlgorithmFactory/QuantConnect.AlgorithmFactory.csproj",
+        "projectName": "QuantConnect.AlgorithmFactory",
+        "projectPath": "/Lean/AlgorithmFactory/QuantConnect.AlgorithmFactory.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/AlgorithmFactory/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+              "/Lean/Algorithm/QuantConnect.Algorithm.csproj": {
+                "projectPath": "/Lean/Algorithm/QuantConnect.Algorithm.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj"
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Configuration/QuantConnect.Configuration.csproj": {
+                "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj"
+              },
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -485,11 +330,80 @@
           "warnAsError": [
             "NU1605"
           ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "NodaTime": {
+              "target": "Package",
+              "version": "[3.0.5, )"
+            },
+            "QuantConnect.pythonnet": {
+              "target": "Package",
+              "version": "[2.0.32, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Lean/Api/QuantConnect.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Lean/Api/QuantConnect.Api.csproj",
+        "projectName": "QuantConnect.Api",
+        "projectPath": "/Lean/Api/QuantConnect.Api.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/Lean/LocalPackages": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
+              },
+              "/Lean/Configuration/QuantConnect.Configuration.csproj": {
+                "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj"
+              },
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
@@ -520,67 +434,52 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\QuantConnect.Brokerages.csproj": {
+    "/Lean/Brokerages/QuantConnect.Brokerages.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\QuantConnect.Brokerages.csproj",
+        "projectUniqueName": "/Lean/Brokerages/QuantConnect.Brokerages.csproj",
         "projectName": "QuantConnect.Brokerages",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\QuantConnect.Brokerages.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\obj\\",
+        "projectPath": "/Lean/Brokerages/QuantConnect.Brokerages.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Brokerages/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj"
+              "/Lean/Api/QuantConnect.Api.csproj": {
+                "projectPath": "/Lean/Api/QuantConnect.Api.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj"
+              "/Lean/Compression/QuantConnect.Compression.csproj": {
+                "projectPath": "/Lean/Compression/QuantConnect.Compression.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj"
+              "/Lean/Configuration/QuantConnect.Configuration.csproj": {
+                "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -589,11 +488,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -624,61 +518,46 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
+    "/Lean/Common/QuantConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj",
+        "projectUniqueName": "/Lean/Common/QuantConnect.csproj",
         "projectName": "QuantConnect.Common",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\obj\\",
+        "projectPath": "/Lean/Common/QuantConnect.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj"
+              "/Lean/Compression/QuantConnect.Compression.csproj": {
+                "projectPath": "/Lean/Compression/QuantConnect.Compression.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj"
+              "/Lean/Configuration/QuantConnect.Configuration.csproj": {
+                "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -687,11 +566,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -746,55 +620,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj": {
+    "/Lean/Compression/QuantConnect.Compression.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj",
+        "projectUniqueName": "/Lean/Compression/QuantConnect.Compression.csproj",
         "projectName": "QuantConnect.Compression",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\obj\\",
+        "projectPath": "/Lean/Compression/QuantConnect.Compression.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Compression/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -803,11 +662,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -834,55 +688,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
+    "/Lean/Configuration/QuantConnect.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj",
+        "projectUniqueName": "/Lean/Configuration/QuantConnect.Configuration.csproj",
         "projectName": "QuantConnect.Configuration",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\obj\\",
+        "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Configuration/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -891,11 +730,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -922,82 +756,67 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\QuantConnect.Lean.Engine.csproj": {
+    "/Lean/Engine/QuantConnect.Lean.Engine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\QuantConnect.Lean.Engine.csproj",
+        "projectUniqueName": "/Lean/Engine/QuantConnect.Lean.Engine.csproj",
         "projectName": "QuantConnect.Lean.Engine",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\QuantConnect.Lean.Engine.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\obj\\",
+        "projectPath": "/Lean/Engine/QuantConnect.Lean.Engine.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Engine/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\QuantConnect.Algorithm.CSharp.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\QuantConnect.Algorithm.CSharp.csproj"
+              "/Lean/Algorithm.CSharp/QuantConnect.Algorithm.CSharp.csproj": {
+                "projectPath": "/Lean/Algorithm.CSharp/QuantConnect.Algorithm.CSharp.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\QuantConnect.AlgorithmFactory.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\QuantConnect.AlgorithmFactory.csproj"
+              "/Lean/Algorithm/QuantConnect.Algorithm.csproj": {
+                "projectPath": "/Lean/Algorithm/QuantConnect.Algorithm.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj"
+              "/Lean/AlgorithmFactory/QuantConnect.AlgorithmFactory.csproj": {
+                "projectPath": "/Lean/AlgorithmFactory/QuantConnect.AlgorithmFactory.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj"
+              "/Lean/Api/QuantConnect.Api.csproj": {
+                "projectPath": "/Lean/Api/QuantConnect.Api.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\QuantConnect.Brokerages.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\QuantConnect.Brokerages.csproj"
+              "/Lean/Brokerages/QuantConnect.Brokerages.csproj": {
+                "projectPath": "/Lean/Brokerages/QuantConnect.Brokerages.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj"
+              "/Lean/Compression/QuantConnect.Compression.csproj": {
+                "projectPath": "/Lean/Compression/QuantConnect.Compression.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj"
+              "/Lean/Configuration/QuantConnect.Configuration.csproj": {
+                "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj"
+              "/Lean/Indicators/QuantConnect.Indicators.csproj": {
+                "projectPath": "/Lean/Indicators/QuantConnect.Indicators.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -1006,11 +825,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -1053,58 +867,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj": {
+    "/Lean/Indicators/QuantConnect.Indicators.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj",
+        "projectUniqueName": "/Lean/Indicators/QuantConnect.Indicators.csproj",
         "projectName": "QuantConnect.Indicators",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\obj\\",
+        "projectPath": "/Lean/Indicators/QuantConnect.Indicators.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Indicators/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+              "/Lean/Common/QuantConnect.csproj": {
+                "projectPath": "/Lean/Common/QuantConnect.csproj"
               },
-              "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-                "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+              "/Lean/Logging/QuantConnect.Logging.csproj": {
+                "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
               }
             }
           }
@@ -1113,11 +912,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -1144,47 +938,32 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
+    "/Lean/Logging/QuantConnect.Logging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj",
+        "projectUniqueName": "/Lean/Logging/QuantConnect.Logging.csproj",
         "projectName": "QuantConnect.Logging",
-        "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\obj\\",
+        "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/Lean/Logging/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/Lean/LocalPackages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -1197,11 +976,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -1224,26 +998,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
         }
       }
     }

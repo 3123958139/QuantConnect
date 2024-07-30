@@ -5796,37 +5796,38 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "0.0.0.1-beta2",
     "restore": {
-      "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Panoptes\\Panoptes\\Panoptes.csproj",
+      "projectUniqueName": "/Lean/Panoptes/Panoptes/Panoptes.csproj",
       "projectName": "Panoptes",
-      "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Panoptes\\Panoptes\\Panoptes.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Panoptes\\Panoptes\\obj\\",
+      "projectPath": "/Lean/Panoptes/Panoptes/Panoptes.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/Lean/Panoptes/Panoptes/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Lean/Panoptes/Panoptes/nuget.config",
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "/Lean/LocalPackages": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/avalonia-ci/api/v2": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Panoptes\\Panoptes.Model\\Panoptes.Model.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Panoptes\\Panoptes.Model\\Panoptes.Model.csproj"
+            "/Lean/Panoptes/Panoptes.Model/Panoptes.Model.csproj": {
+              "projectPath": "/Lean/Panoptes/Panoptes.Model/Panoptes.Model.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Panoptes\\Panoptes.ViewModels\\Panoptes.ViewModels.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Panoptes\\Panoptes.ViewModels\\Panoptes.ViewModels.csproj"
+            "/Lean/Panoptes/Panoptes.ViewModels/Panoptes.ViewModels.csproj": {
+              "projectPath": "/Lean/Panoptes/Panoptes.ViewModels/Panoptes.ViewModels.csproj"
             }
           }
         }
@@ -5835,11 +5836,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5902,30 +5898,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
       }
     }
   }

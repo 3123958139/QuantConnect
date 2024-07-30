@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{12156F46-D07E-4E3D-AD2B-7409E82AB62F}|Engine\\QuantConnect.Lean.Engine.csproj|e:\\users\\dengch\\documents\\github\\quantconnect\\myprojects\\leanwindows\\engine\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12156F46-D07E-4E3D-AD2B-7409E82AB62F}|Engine\\QuantConnect.Lean.Engine.csproj|solutionrelative:engine\\engine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Engine.cs",
+              "DocumentMoniker": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\Engine.cs",
+              "RelativeDocumentMoniker": "Engine\\Engine.cs",
+              "ToolTip": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\Engine.cs",
+              "RelativeToolTip": "Engine\\Engine.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAAAHMAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T07:19:01.592Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

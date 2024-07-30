@@ -8856,79 +8856,78 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Launcher\\QuantConnect.Lean.Launcher.csproj",
+      "projectUniqueName": "/Lean/Launcher/QuantConnect.Lean.Launcher.csproj",
       "projectName": "QuantConnect.Lean",
-      "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Launcher\\QuantConnect.Lean.Launcher.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Launcher\\obj\\",
+      "projectPath": "/Lean/Launcher/QuantConnect.Lean.Launcher.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/Lean/Launcher/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/Lean/LocalPackages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\QuantConnect.Algorithm.CSharp.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm.CSharp\\QuantConnect.Algorithm.CSharp.csproj"
+            "/Lean/Algorithm.CSharp/QuantConnect.Algorithm.CSharp.csproj": {
+              "projectPath": "/Lean/Algorithm.CSharp/QuantConnect.Algorithm.CSharp.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\QuantConnect.AlgorithmFactory.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\AlgorithmFactory\\QuantConnect.AlgorithmFactory.csproj"
+            "/Lean/Algorithm/QuantConnect.Algorithm.csproj": {
+              "projectPath": "/Lean/Algorithm/QuantConnect.Algorithm.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Algorithm\\QuantConnect.Algorithm.csproj"
+            "/Lean/AlgorithmFactory/QuantConnect.AlgorithmFactory.csproj": {
+              "projectPath": "/Lean/AlgorithmFactory/QuantConnect.AlgorithmFactory.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Api\\QuantConnect.Api.csproj"
+            "/Lean/Api/QuantConnect.Api.csproj": {
+              "projectPath": "/Lean/Api/QuantConnect.Api.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\QuantConnect.Brokerages.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Brokerages\\QuantConnect.Brokerages.csproj"
+            "/Lean/Brokerages/QuantConnect.Brokerages.csproj": {
+              "projectPath": "/Lean/Brokerages/QuantConnect.Brokerages.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Common\\QuantConnect.csproj"
+            "/Lean/Common/QuantConnect.csproj": {
+              "projectPath": "/Lean/Common/QuantConnect.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Compression\\QuantConnect.Compression.csproj"
+            "/Lean/Compression/QuantConnect.Compression.csproj": {
+              "projectPath": "/Lean/Compression/QuantConnect.Compression.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Configuration\\QuantConnect.Configuration.csproj"
+            "/Lean/Configuration/QuantConnect.Configuration.csproj": {
+              "projectPath": "/Lean/Configuration/QuantConnect.Configuration.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\QuantConnect.Lean.Engine.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Engine\\QuantConnect.Lean.Engine.csproj"
+            "/Lean/Engine/QuantConnect.Lean.Engine.csproj": {
+              "projectPath": "/Lean/Engine/QuantConnect.Lean.Engine.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Indicators\\QuantConnect.Indicators.csproj"
+            "/Lean/Indicators/QuantConnect.Indicators.csproj": {
+              "projectPath": "/Lean/Indicators/QuantConnect.Indicators.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj"
+            "/Lean/Logging/QuantConnect.Logging.csproj": {
+              "projectPath": "/Lean/Logging/QuantConnect.Logging.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Messaging\\QuantConnect.Messaging.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Messaging\\QuantConnect.Messaging.csproj"
+            "/Lean/Messaging/QuantConnect.Messaging.csproj": {
+              "projectPath": "/Lean/Messaging/QuantConnect.Messaging.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Optimizer.Launcher\\QuantConnect.Optimizer.Launcher.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Optimizer.Launcher\\QuantConnect.Optimizer.Launcher.csproj"
+            "/Lean/Optimizer.Launcher/QuantConnect.Optimizer.Launcher.csproj": {
+              "projectPath": "/Lean/Optimizer.Launcher/QuantConnect.Optimizer.Launcher.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Queues\\QuantConnect.Queues.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Queues\\QuantConnect.Queues.csproj"
+            "/Lean/Queues/QuantConnect.Queues.csproj": {
+              "projectPath": "/Lean/Queues/QuantConnect.Queues.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Research\\QuantConnect.Research.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Research\\QuantConnect.Research.csproj"
+            "/Lean/Research/QuantConnect.Research.csproj": {
+              "projectPath": "/Lean/Research/QuantConnect.Research.csproj"
             },
-            "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\ToolBox\\QuantConnect.ToolBox.csproj": {
-              "projectPath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\ToolBox\\QuantConnect.ToolBox.csproj"
+            "/Lean/ToolBox/QuantConnect.ToolBox.csproj": {
+              "projectPath": "/Lean/ToolBox/QuantConnect.ToolBox.csproj"
             }
           }
         }
@@ -8937,11 +8936,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8964,30 +8958,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.28, 6.0.28]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.404/RuntimeIdentifierGraph.json"
       }
     }
   }

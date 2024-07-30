@@ -1,13 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "euqAR6Wfm/RUkFK11UmWBXYf9j85yrX1A3XBk5HIoifJ7Y+/dCMqN67ApVEKOmRVs4rYlTBfCmn3b67kOaTAqg==",
+  "dgSpecHash": "oFyCiFR/eXe6N7mEhFHZOpNVPZCVRUhEZso3d2Q4Ow+0AXiSBLBDkT5JxKswGA5oyr+R+sZKnynEBYM+rexTAw==",
   "success": true,
-  "projectFilePath": "E:\\Users\\dengch\\Documents\\GitHub\\QuantConnect\\MyProjects\\LeanWindows\\Logging\\QuantConnect.Logging.csproj",
+  "projectFilePath": "/Lean/Logging/QuantConnect.Logging.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\system.componentmodel.composition\\6.0.0\\system.componentmodel.composition.6.0.0.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512"
+    "/root/.nuget/packages/system.componentmodel.composition/6.0.0/system.componentmodel.composition.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

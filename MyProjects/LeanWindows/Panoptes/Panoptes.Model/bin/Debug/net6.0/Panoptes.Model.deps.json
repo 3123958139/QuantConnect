@@ -301,7 +301,7 @@
         "runtime": {
           "QuantConnect.Common.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -309,7 +309,7 @@
         "runtime": {
           "QuantConnect.Compression.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -317,7 +317,7 @@
         "runtime": {
           "QuantConnect.Configuration.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -325,7 +325,7 @@
         "runtime": {
           "QuantConnect.Logging.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },

@@ -67,3 +67,140 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 System.NullReferenceException: Object reference not set to an instance of an object.
    at Panoptes.MainWindow.OnClosing(Object sender, CancelEventArgs e) in E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\MainWindow.axaml.cs:line 78
 2024-07-30 14:28:22.672 +08:00 [INF] Application closed.
+2024-07-30 15:18:07.054 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: ["1234"].
+2024-07-30 15:18:08.597 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 15:18:08.620 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 15:18:08.659 +08:00 [INF] BaseSettingsManager.CheckVersion: Settings version and app version are both '0.0.0.1'.
+2024-07-30 15:18:08.659 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done.
+2024-07-30 15:18:08.695 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 98ms.
+2024-07-30 15:18:10.812 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 15:18:12.734 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 15:18:12.740 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 15:18:12.742 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 15:18:12.935 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"BacktestNode"'.
+2024-07-30 15:18:12.962 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"RuntimeError"'.
+2024-07-30 15:18:12.963 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SystemDebug"'.
+2024-07-30 15:18:24.868 +08:00 [INF] LogPanelViewModel: Clear
+2024-07-30 15:18:24.868 +08:00 [INF] StatisticsPanelViewModel: Clear
+2024-07-30 15:18:24.868 +08:00 [INF] RuntimeStatisticsPanelViewModel: Clear
+2024-07-30 15:18:24.868 +08:00 [INF] ProfitLossPanelViewModel: Clear
+2024-07-30 15:18:24.869 +08:00 [INF] TradesPanelViewModel: Clear
+2024-07-30 15:18:24.869 +08:00 [INF] HoldingsPanelViewModel: Clear
+2024-07-30 15:18:24.869 +08:00 [INF] CashBookPanelViewModel: Clear
+2024-07-30 15:18:24.871 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 15:18:24.874 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 15:18:24.875 +08:00 [ERR] MainWindow.OnClosing
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Panoptes.MainWindow.OnClosing(Object sender, CancelEventArgs e) in E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\MainWindow.axaml.cs:line 78
+2024-07-30 15:18:24.900 +08:00 [INF] Application closed.
+2024-07-30 15:45:09.087 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: [].
+2024-07-30 15:45:10.521 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 15:45:10.555 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 15:45:10.590 +08:00 [INF] BaseSettingsManager.CheckVersion: Settings version and app version are both '0.0.0.1'.
+2024-07-30 15:45:10.590 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done.
+2024-07-30 15:45:10.590 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 68ms.
+2024-07-30 15:45:12.744 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 15:45:14.098 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 15:45:14.103 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 15:45:14.105 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 15:45:14.524 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"BacktestNode"'.
+2024-07-30 15:45:18.183 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SecurityTypes"'.
+2024-07-30 15:45:18.183 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmNameUpdate"'.
+2024-07-30 15:45:18.183 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmTagsUpdate"'.
+2024-07-30 15:45:29.963 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SystemDebug"'.
+2024-07-30 15:45:37.209 +08:00 [INF] LogPanelViewModel: Clear
+2024-07-30 15:45:37.209 +08:00 [INF] StatisticsPanelViewModel: Clear
+2024-07-30 15:45:37.210 +08:00 [INF] RuntimeStatisticsPanelViewModel: Clear
+2024-07-30 15:45:37.210 +08:00 [INF] ProfitLossPanelViewModel: Clear
+2024-07-30 15:45:37.210 +08:00 [INF] TradesPanelViewModel: Clear
+2024-07-30 15:45:37.211 +08:00 [INF] HoldingsPanelViewModel: Clear
+2024-07-30 15:45:37.211 +08:00 [INF] CashBookPanelViewModel: Clear
+2024-07-30 15:45:37.217 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 15:45:37.220 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 15:45:37.220 +08:00 [ERR] MainWindow.OnClosing
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Panoptes.MainWindow.OnClosing(Object sender, CancelEventArgs e) in /Lean/Panoptes/Panoptes/MainWindow.axaml.cs:line 78
+2024-07-30 15:45:37.244 +08:00 [INF] Application closed.
+2024-07-30 16:17:50.154 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: [].
+2024-07-30 16:17:51.312 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 16:17:51.335 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 16:17:51.364 +08:00 [INF] BaseSettingsManager.CheckVersion: Settings version and app version are both '0.0.0.1'.
+2024-07-30 16:17:51.364 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done.
+2024-07-30 16:17:51.398 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 85ms.
+2024-07-30 16:17:53.470 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 16:18:00.372 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 16:18:00.377 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 16:18:00.379 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 16:18:00.757 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"BacktestNode"'.
+2024-07-30 16:18:03.701 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SecurityTypes"'.
+2024-07-30 16:18:03.701 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmNameUpdate"'.
+2024-07-30 16:18:03.701 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmTagsUpdate"'.
+2024-07-30 16:18:14.798 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SystemDebug"'.
+2024-07-30 16:18:33.851 +08:00 [INF] OxyPlotSelectionViewModel.SetAndProcessPlot: No change requested, arleady ("Line", "00:00:00", 17).
+2024-07-30 16:18:34.314 +08:00 [INF] OxyPlotSelectionViewModel.SetAndProcessPlot: Start("Candles", "00:00:00", 17)...
+2024-07-30 16:18:34.314 +08:00 [INF] OxyPlotSelectionViewModel.SetAndProcessPlot: Setting period to 1min bacause Candles (17)
+2024-07-30 16:18:34.316 +08:00 [INF] OxyPlotSelectionViewModel.SetAndProcessPlot: Done("Candles", "00:01:00"->"00:01:00", 17).
+2024-07-30 16:18:35.457 +08:00 [INF] OxyPlotSelectionViewModel.SetAndProcessPlot: No change requested, arleady ("Candles", "00:01:00", 17).
+2024-07-30 16:18:36.073 +08:00 [INF] OxyPlotSelectionViewModel.SetAndProcessPlot: Start("Line", "00:01:00", 17)...
+2024-07-30 16:18:36.073 +08:00 [INF] OxyPlotSelectionViewModel.SetAndProcessPlot: Done("Line", "00:01:00"->"00:01:00", 17).
+2024-07-30 16:18:40.659 +08:00 [INF] LogPanelViewModel: Clear
+2024-07-30 16:18:40.659 +08:00 [INF] StatisticsPanelViewModel: Clear
+2024-07-30 16:18:40.659 +08:00 [INF] RuntimeStatisticsPanelViewModel: Clear
+2024-07-30 16:18:40.659 +08:00 [INF] ProfitLossPanelViewModel: Clear
+2024-07-30 16:18:40.659 +08:00 [INF] TradesPanelViewModel: Clear
+2024-07-30 16:18:40.659 +08:00 [INF] HoldingsPanelViewModel: Clear
+2024-07-30 16:18:40.660 +08:00 [INF] CashBookPanelViewModel: Clear
+2024-07-30 16:18:40.665 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 16:18:40.668 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 16:18:40.668 +08:00 [ERR] MainWindow.OnClosing
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Panoptes.MainWindow.OnClosing(Object sender, CancelEventArgs e) in /Lean/Panoptes/Panoptes/MainWindow.axaml.cs:line 78
+2024-07-30 16:18:40.708 +08:00 [INF] Application closed.
+2024-07-30 17:15:36.105 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: [].
+2024-07-30 17:15:37.173 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 17:15:37.195 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 17:15:37.223 +08:00 [INF] BaseSettingsManager.CheckVersion: Settings version and app version are both '0.0.0.1'.
+2024-07-30 17:15:37.223 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done.
+2024-07-30 17:15:37.257 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 83ms.
+2024-07-30 17:15:39.341 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 17:15:40.899 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 17:15:40.904 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 17:15:40.905 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 17:15:41.384 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"BacktestNode"'.
+2024-07-30 17:15:44.736 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SecurityTypes"'.
+2024-07-30 17:15:44.736 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmNameUpdate"'.
+2024-07-30 17:15:44.736 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmTagsUpdate"'.
+2024-07-30 17:15:56.489 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SystemDebug"'.
+2024-07-30 17:17:39.008 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 17:17:39.241 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"BacktestNode"'.
+2024-07-30 17:17:42.310 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SecurityTypes"'.
+2024-07-30 17:17:42.311 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmNameUpdate"'.
+2024-07-30 17:17:42.313 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmTagsUpdate"'.
+2024-07-30 17:17:53.915 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SystemDebug"'.
+2024-07-30 17:18:08.138 +08:00 [INF] LogPanelViewModel: Clear
+2024-07-30 17:18:08.138 +08:00 [INF] StatisticsPanelViewModel: Clear
+2024-07-30 17:18:08.138 +08:00 [INF] RuntimeStatisticsPanelViewModel: Clear
+2024-07-30 17:18:08.138 +08:00 [INF] ProfitLossPanelViewModel: Clear
+2024-07-30 17:18:08.139 +08:00 [INF] TradesPanelViewModel: Clear
+2024-07-30 17:18:08.139 +08:00 [INF] HoldingsPanelViewModel: Clear
+2024-07-30 17:18:08.139 +08:00 [INF] CashBookPanelViewModel: Clear
+2024-07-30 17:18:08.141 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 17:18:08.144 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 17:18:08.144 +08:00 [ERR] MainWindow.OnClosing
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Panoptes.MainWindow.OnClosing(Object sender, CancelEventArgs e) in /Lean/Panoptes/Panoptes/MainWindow.axaml.cs:line 78
+2024-07-30 17:18:08.167 +08:00 [INF] Application closed.
+2024-07-30 17:22:57.314 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: [].
+2024-07-30 17:22:58.422 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 17:22:58.444 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 17:22:58.472 +08:00 [INF] BaseSettingsManager.CheckVersion: Settings version and app version are both '0.0.0.1'.
+2024-07-30 17:22:58.472 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done.
+2024-07-30 17:22:58.506 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 83ms.
+2024-07-30 17:23:00.696 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 17:23:02.106 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 17:23:02.111 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 17:23:02.114 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 17:23:02.486 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"BacktestNode"'.
+2024-07-30 17:23:07.774 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SecurityTypes"'.
+2024-07-30 17:23:07.774 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmNameUpdate"'.
+2024-07-30 17:23:07.774 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"AlgorithmTagsUpdate"'.

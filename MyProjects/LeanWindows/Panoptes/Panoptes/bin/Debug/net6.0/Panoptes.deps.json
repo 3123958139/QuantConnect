@@ -130,17 +130,17 @@
           "runtimes/win-arm64/native/av_libglesv2.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "2.1.0.0"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win7-x64/native/av_libglesv2.dll": {
             "rid": "win7-x64",
             "assetType": "native",
-            "fileVersion": "2.1.0.0"
+            "fileVersion": "0.0.0.0"
           },
           "runtimes/win7-x86/native/av_libglesv2.dll": {
             "rid": "win7-x86",
             "assetType": "native",
-            "fileVersion": "2.1.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1097,7 +1097,7 @@
         "runtime": {
           "QuantConnect.Common.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1105,7 +1105,7 @@
         "runtime": {
           "QuantConnect.Compression.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1113,7 +1113,7 @@
         "runtime": {
           "QuantConnect.Configuration.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1121,7 +1121,7 @@
         "runtime": {
           "QuantConnect.Logging.dll": {
             "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
