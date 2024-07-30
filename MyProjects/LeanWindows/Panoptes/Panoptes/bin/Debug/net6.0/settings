@@ -1,0 +1,13 @@
+{
+  "Version": "0.0.0.1 (0.0.0.1-beta2\u002Bbf7a32c8fb0e690f4e4d307c2f437e09912599e9)",
+  "SelectedTimeZone": "China Standard Time",
+  "GridsColumns": {},
+  "SoundsActivated": true,
+  "SessionParameters": {
+    "type": "StreamSessionParameters",
+    "Host": "localhost",
+    "Port": "1234",
+    "CloseAfterCompleted": "True"
+  },
+  "PlotRefreshLimitMilliseconds": 100
+}

@@ -1,0 +1,12 @@
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\bin\Release\QuantConnect.Logging.xml
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\bin\Release\QuantConnect.Logging.deps.json
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\bin\Release\QuantConnect.Logging.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\bin\Release\QuantConnect.Logging.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\QuantConnect.Logging.csproj.AssemblyReference.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\QuantConnect.Logging.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\QuantConnect.Logging.csproj.CoreCompileInputs.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\QuantConnect.Logging.sourcelink.json
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\QuantConnect.Logging.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\refint\QuantConnect.Logging.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\QuantConnect.Logging.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Logging\obj\Release\ref\QuantConnect.Logging.dll

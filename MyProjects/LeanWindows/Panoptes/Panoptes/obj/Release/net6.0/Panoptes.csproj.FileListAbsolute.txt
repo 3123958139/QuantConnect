@@ -1,0 +1,7 @@
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\obj\Release\net6.0\Panoptes.csproj.AssemblyReference.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\obj\Release\net6.0\Panoptes.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\obj\Release\net6.0\Panoptes.AssemblyInfoInputs.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\obj\Release\net6.0\Panoptes.AssemblyInfo.cs
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\obj\Release\net6.0\Panoptes.csproj.CoreCompileInputs.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\obj\Release\net6.0\Panoptes.sourcelink.json
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\obj\Release\net6.0\refint\Panoptes.dll

@@ -1,0 +1,69 @@
+2024-07-30 14:24:58.267 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: [].
+2024-07-30 14:25:00.755 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 14:25:00.804 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 14:25:00.806 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done - No file found, using default.
+2024-07-30 14:25:00.807 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 14:25:00.855 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 14:25:00.855 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 99ms.
+2024-07-30 14:25:03.277 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 14:25:04.837 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 14:25:04.848 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 14:25:04.868 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 14:25:06.467 +08:00 [INF] LogPanelViewModel: Clear
+2024-07-30 14:25:06.468 +08:00 [INF] StatisticsPanelViewModel: Clear
+2024-07-30 14:25:06.468 +08:00 [INF] RuntimeStatisticsPanelViewModel: Clear
+2024-07-30 14:25:06.468 +08:00 [INF] ProfitLossPanelViewModel: Clear
+2024-07-30 14:25:06.468 +08:00 [INF] TradesPanelViewModel: Clear
+2024-07-30 14:25:06.468 +08:00 [INF] HoldingsPanelViewModel: Clear
+2024-07-30 14:25:06.469 +08:00 [INF] CashBookPanelViewModel: Clear
+2024-07-30 14:25:06.501 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 14:25:06.503 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 14:25:41.702 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: ["1234"].
+2024-07-30 14:25:43.181 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 14:25:43.203 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 14:25:43.240 +08:00 [INF] BaseSettingsManager.CheckVersion: Settings version and app version are both '0.0.0.1'.
+2024-07-30 14:25:43.241 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done.
+2024-07-30 14:25:43.275 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 93ms.
+2024-07-30 14:25:45.401 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 14:25:47.150 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 14:25:47.155 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 14:25:47.157 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 14:25:57.597 +08:00 [INF] LogPanelViewModel: Clear
+2024-07-30 14:25:57.597 +08:00 [INF] StatisticsPanelViewModel: Clear
+2024-07-30 14:25:57.598 +08:00 [INF] RuntimeStatisticsPanelViewModel: Clear
+2024-07-30 14:25:57.598 +08:00 [INF] ProfitLossPanelViewModel: Clear
+2024-07-30 14:25:57.598 +08:00 [INF] TradesPanelViewModel: Clear
+2024-07-30 14:25:57.598 +08:00 [INF] HoldingsPanelViewModel: Clear
+2024-07-30 14:25:57.598 +08:00 [INF] CashBookPanelViewModel: Clear
+2024-07-30 14:25:57.601 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 14:25:57.604 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 14:25:57.604 +08:00 [ERR] MainWindow.OnClosing
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Panoptes.MainWindow.OnClosing(Object sender, CancelEventArgs e) in E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\MainWindow.axaml.cs:line 78
+2024-07-30 14:25:57.633 +08:00 [INF] Application closed.
+2024-07-30 14:27:54.779 +08:00 [INF] Starting Panoptes v0.0.0.1 (0.0.0.1-beta2+bf7a32c8fb0e690f4e4d307c2f437e09912599e9) on 'Microsoft Windows NT 10.0.22631.0' with args: ["1234"].
+2024-07-30 14:27:56.290 +08:00 [INF] App.LoadSplashScreen: Loading settings and showing splash screen.
+2024-07-30 14:27:56.312 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising...
+2024-07-30 14:27:56.348 +08:00 [INF] BaseSettingsManager.CheckVersion: Settings version and app version are both '0.0.0.1'.
+2024-07-30 14:27:56.349 +08:00 [INF] JsonSettingsManager.InitialiseAsync: Initialising done.
+2024-07-30 14:27:56.384 +08:00 [INF] App.LoadSplashScreen: Loading settings done in 93ms.
+2024-07-30 14:27:58.500 +08:00 [INF] TradesDataGridControl.Initialized
+2024-07-30 14:28:02.589 +08:00 [INF] BaseSettingsManager.UpdateSessionParameters: Updated 4 parameters.
+2024-07-30 14:28:02.593 +08:00 [INF] SessionService.OpenSessionAsync: Panoptes.Model.Sessions.Stream.StreamSession.
+2024-07-30 14:28:02.595 +08:00 [INF] BaseStreamSession.Subscribe: New subscription.
+2024-07-30 14:28:02.774 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"BacktestNode"'.
+2024-07-30 14:28:02.785 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"RuntimeError"'.
+2024-07-30 14:28:02.785 +08:00 [WRN] BaseStreamSession.HandlePacketEventsListener: Unknown packet type '"SystemDebug"'.
+2024-07-30 14:28:22.645 +08:00 [INF] LogPanelViewModel: Clear
+2024-07-30 14:28:22.646 +08:00 [INF] StatisticsPanelViewModel: Clear
+2024-07-30 14:28:22.646 +08:00 [INF] RuntimeStatisticsPanelViewModel: Clear
+2024-07-30 14:28:22.646 +08:00 [INF] ProfitLossPanelViewModel: Clear
+2024-07-30 14:28:22.646 +08:00 [INF] TradesPanelViewModel: Clear
+2024-07-30 14:28:22.646 +08:00 [INF] HoldingsPanelViewModel: Clear
+2024-07-30 14:28:22.646 +08:00 [INF] CashBookPanelViewModel: Clear
+2024-07-30 14:28:22.649 +08:00 [INF] JsonSettingsManager.Save: Saving...
+2024-07-30 14:28:22.651 +08:00 [INF] JsonSettingsManager.Save: Saving done.
+2024-07-30 14:28:22.652 +08:00 [ERR] MainWindow.OnClosing
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Panoptes.MainWindow.OnClosing(Object sender, CancelEventArgs e) in E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Panoptes\Panoptes\MainWindow.axaml.cs:line 78
+2024-07-30 14:28:22.672 +08:00 [INF] Application closed.

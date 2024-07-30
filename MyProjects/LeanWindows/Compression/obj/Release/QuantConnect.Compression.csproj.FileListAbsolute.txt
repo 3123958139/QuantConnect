@@ -1,0 +1,16 @@
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\bin\Release\QuantConnect.Compression.xml
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\bin\Release\QuantConnect.Compression.deps.json
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\bin\Release\QuantConnect.Compression.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\bin\Release\QuantConnect.Compression.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\bin\Release\QuantConnect.Logging.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\bin\Release\QuantConnect.Logging.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\bin\Release\QuantConnect.Logging.xml
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\QuantConnect.Compression.csproj.AssemblyReference.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\QuantConnect.Compression.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\QuantConnect.Compression.csproj.CoreCompileInputs.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\QuantConnect.Compression.sourcelink.json
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\QuantCon.794D27AD.Up2Date
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\QuantConnect.Compression.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\refint\QuantConnect.Compression.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\QuantConnect.Compression.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Compression\obj\Release\ref\QuantConnect.Compression.dll

@@ -1,0 +1,16 @@
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\bin\Release\QuantConnect.Configuration.xml
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\bin\Release\QuantConnect.Configuration.deps.json
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\bin\Release\QuantConnect.Configuration.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\bin\Release\QuantConnect.Configuration.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\bin\Release\QuantConnect.Logging.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\bin\Release\QuantConnect.Logging.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\bin\Release\QuantConnect.Logging.xml
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\QuantConnect.Configuration.csproj.AssemblyReference.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\QuantConnect.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\QuantConnect.Configuration.csproj.CoreCompileInputs.cache
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\QuantConnect.Configuration.sourcelink.json
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\QuantCon.0B6A77F3.Up2Date
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\QuantConnect.Configuration.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\refint\QuantConnect.Configuration.dll
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\QuantConnect.Configuration.pdb
+E:\Users\dengch\Documents\GitHub\QuantConnect\MyProjects\LeanWindows\Configuration\obj\Release\ref\QuantConnect.Configuration.dll
